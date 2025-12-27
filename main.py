@@ -1,5 +1,12 @@
 from flask import Flask, render_template, request, redirect, jsonify
 import sqlite3
+import sys
+import os
+
+# Add backend directory to path
+sys.path.append(os.path.join(os.path.dirname(__file__), 'backend'))
+
+from chatbot import get_response
 
 app = Flask(__name__)
 
@@ -127,6 +134,24 @@ def submit():
     except Exception as e:
         print(f"Error submitting form: {str(e)}")
         return jsonify({'success': False, 'message': 'Failed to submit form. Please try again later.'}), 500
+
+@app.route('/chatbot', methods=['POST'])
+def chatbot():
+    try:
+        data = request.get_json()
+        user_input = data.get('user_input', '')
+        
+        if not user_input:
+            return jsonify({'response': 'Please provide a message.'}), 400
+        
+        # Get response from Gemini API
+        response = get_response(user_input)
+        
+        return jsonify({'response': response}), 200
+        
+    except Exception as e:
+        print(f"Error in chatbot endpoint: {str(e)}")
+        return jsonify({'response': 'I\'m sorry, I\'m having trouble processing your request right now. Please try again later.'}), 500
 
 if __name__ == "__main__":
     app.run(debug=True)
