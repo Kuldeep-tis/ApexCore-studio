@@ -206,11 +206,39 @@
         chatbotMessages.appendChild(typingDiv);
         chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
         
-        // Simulate response delay (1-2 seconds)
-        setTimeout(() => {
-            document.getElementById('typing-indicator').remove();
-            addMessage(getRandomResponse());
-        }, 1000 + Math.random() * 1000);
+        // Call the chatbot API
+        fetch('/chatbot', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ user_input: userMessage })
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Remove typing indicator
+            const typingIndicator = document.getElementById('typing-indicator');
+            if (typingIndicator) {
+                typingIndicator.remove();
+            }
+            // Add the response message
+            addMessage(data.response || 'I\'m sorry, I couldn\'t process that request. Please try again.');
+        })
+        .catch(error => {
+            console.error('Error calling chatbot API:', error);
+            // Remove typing indicator
+            const typingIndicator = document.getElementById('typing-indicator');
+            if (typingIndicator) {
+                typingIndicator.remove();
+            }
+            // Show error message
+            addMessage('I\'m sorry, I\'m having trouble connecting right now. Please try again later or contact our support team.');
+        });
     });
 
     // Event listeners
