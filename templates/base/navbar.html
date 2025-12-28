@@ -8,7 +8,6 @@
                         viewBox="92 60 328 320"
                         class="h-12 w-auto"
                     >
-                        <!-- Top Chevron -->
                         <path
                             d="
                               M256 60
@@ -22,7 +21,6 @@
                             fill="#0B2A45"
                         />
                         
-                        <!-- Inner Diamond -->
                         <path
                             d="
                               M256 180
@@ -44,11 +42,10 @@
                 <a href="/" class="text-sm font-medium text-white">Home</a>
                 
                 <div class="relative group">
-                    <button class="text-sm font-medium text-slate-300 group-hover:text-white flex items-center gap-1 transition-colors">
+                    <button class="text-sm font-medium text-slate-300 group-hover:text-white flex items-center gap-1 transition-colors py-2">
                         Solutions
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
-                    <!-- Dropdown positioned directly below button with padding-top to bridge gap -->
                     <div class="absolute top-full left-0 pt-2 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                         <div class="bg-slate-900 border border-slate-700 rounded-xl shadow-2xl p-4">
                             <a href="/solutions/high-risk-accounts" class="block px-4 py-2 text-sm text-slate-300 hover:text-white hover:bg-slate-800 rounded-lg transition-colors">High-Risk Accounts</a>
@@ -60,11 +57,10 @@
                 </div>
 
                 <div class="relative group">
-                    <button class="text-sm font-medium text-slate-300 group-hover:text-white flex items-center gap-1 transition-colors">
+                    <button class="text-sm font-medium text-slate-300 group-hover:text-white flex items-center gap-1 transition-colors py-2">
                         Industries
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
-                    <!-- Dropdown positioned directly below button with padding-top to bridge gap -->
                     <div class="absolute top-full left-0 pt-2 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                         <div class="bg-slate-900 border border-slate-700 rounded-xl shadow-2xl p-4">
                             <a href="/industries/e-commerce" class="block px-4 py-2 text-sm text-slate-300 hover:text-white hover:bg-slate-800 rounded-lg transition-colors">E-Commerce</a>
@@ -75,29 +71,60 @@
                     </div>
                 </div>
 
-                <a href="/partners/partners" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Partners</a>
+                <a href="/partners" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Partners</a>
             </div>
 
             <div class="hidden lg:flex items-center gap-4">
-                <a href="#contact" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Contact Us</a>
+                <a href="#" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Login</a>
                 <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" class="px-5 py-2 rounded-full bg-primary hover:bg-primary-dark text-white text-sm font-bold shadow-lg shadow-primary/20 transition-all duration-300 transform hover:-translate-y-0.5">
                     Get Started
                 </button>
             </div>
 
-            <button class="lg:hidden p-2 text-slate-300" id="mobile-menu-btn">
+            <button class="lg:hidden p-2 text-slate-300 hover:text-white transition-colors" id="mobile-menu-btn">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
             </button>
         </div>
     </div>
     
-    <div id="mobile-menu" class="hidden lg:hidden bg-slate-900 border-b border-slate-800 p-4 absolute w-full left-0">
-         <div class="flex flex-col gap-4">
-            <a href="#" class="text-white font-medium">Solutions</a>
-            <a href="#" class="text-white font-medium">Industries</a>
-            <a href="#contact" class="text-white font-medium">Contact</a>
-            <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'}); document.getElementById('mobile-menu').classList.add('hidden');" class="w-full bg-primary text-white py-3 rounded-lg font-bold">Apply Now</button>
+    <div id="mobile-menu" class="hidden lg:hidden bg-slate-900 border-b border-slate-800 absolute w-full left-0 shadow-2xl max-h-[85vh] overflow-y-auto">
+         <div class="flex flex-col p-6 space-y-4">
+            <a href="/" class="text-lg font-medium text-white border-b border-slate-800 pb-2">Home</a>
+            
+            <div>
+                <button onclick="document.getElementById('mobile-solutions').classList.toggle('hidden'); this.querySelector('svg').classList.toggle('rotate-180')" class="w-full flex justify-between items-center text-lg font-medium text-slate-300 hover:text-white pb-2 transition-colors">
+                    Solutions
+                    <svg class="w-5 h-5 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div id="mobile-solutions" class="hidden pl-4 space-y-3 mt-2 border-l-2 border-slate-700 ml-1">
+                    <a href="/solutions/high-risk-accounts" class="block text-slate-400 hover:text-primary">High-Risk Accounts</a>
+                    <a href="/solutions/payment-gateway" class="block text-slate-400 hover:text-primary">Payment Gateway</a>
+                    <a href="/solutions/chargeback-prevention" class="block text-slate-400 hover:text-primary">Chargeback Prevention</a>
+                    <a href="/solutions/offshore-processing" class="block text-slate-400 hover:text-primary">Offshore Processing</a>
+                </div>
+            </div>
+
+            <div>
+                <button onclick="document.getElementById('mobile-industries').classList.toggle('hidden'); this.querySelector('svg').classList.toggle('rotate-180')" class="w-full flex justify-between items-center text-lg font-medium text-slate-300 hover:text-white pb-2 transition-colors">
+                    Industries
+                    <svg class="w-5 h-5 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div id="mobile-industries" class="hidden pl-4 space-y-3 mt-2 border-l-2 border-slate-700 ml-1">
+                    <a href="/industries/e-commerce" class="block text-slate-400 hover:text-primary">E-Commerce</a>
+                    <a href="/industries/cbd-hemp" class="block text-slate-400 hover:text-primary">CBD & Hemp</a>
+                    <a href="/industries/adult-entertainment" class="block text-slate-400 hover:text-primary">Adult & Entertainment</a>
+                    <a href="/industries/forex-crypto" class="block text-slate-400 hover:text-primary">Forex & Crypto</a>
+                </div>
+            </div>
+
+            <a href="/partners/partners" class="text-lg font-medium text-slate-300 hover:text-white border-b border-slate-800 pb-2">Partners</a>
+            
+            <div class="pt-4 flex flex-col gap-4">
+                <a href="#" class="text-center text-slate-300 hover:text-white font-medium py-2">Login</a>
+                <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'}); document.getElementById('mobile-menu').classList.add('hidden');" class="w-full bg-primary hover:bg-primary-dark text-white py-4 rounded-xl font-bold text-lg shadow-lg shadow-primary/20">
+                    Get Started
+                </button>
+            </div>
         </div>
     </div>
 </nav>
-
