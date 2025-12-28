@@ -1,0 +1,103 @@
+<nav class="fixed top-0 left-0 right-0 z-50 glass-dark">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="flex items-center justify-between h-20">
+            <a href="/" class="flex items-center gap-3 group">
+                <div class="p-1.5 rounded-lg shadow-lg shadow-primary/10 transition-transform group-hover:scale-105">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="92 60 328 320"
+                        class="h-12 w-auto"
+                    >
+                        <!-- Top Chevron -->
+                        <path
+                            d="
+                              M256 60
+                              L420 224
+                              L380 264
+                              L256 140
+                              L132 264
+                              L92 224
+                              Z
+                            "
+                            fill="#0B2A45"
+                        />
+                        
+                        <!-- Inner Diamond -->
+                        <path
+                            d="
+                              M256 180
+                              L356 280
+                              L256 380
+                              L156 280
+                              Z
+                            "
+                            fill="#1E73B9"
+                        />
+                    </svg>
+                </div>
+                <span class="text-xl font-display font-bold tracking-tight text-white group-hover:text-primary transition-colors">
+                    ApexCore <span class="text-primary font-normal">Studios</span>
+                </span>
+            </a>
+
+            <div class="hidden lg:flex items-center gap-8">
+                <a href="/" class="text-sm font-medium text-white">Home</a>
+                
+                <div class="relative group">
+                    <button class="text-sm font-medium text-slate-300 group-hover:text-white flex items-center gap-1 transition-colors">
+                        Solutions
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <!-- Dropdown positioned directly below button with padding-top to bridge gap -->
+                    <div class="absolute top-full left-0 pt-2 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                        <div class="bg-slate-900 border border-slate-700 rounded-xl shadow-2xl p-4">
+                            <a href="/solutions/high-risk-accounts" class="block px-4 py-2 text-sm text-slate-300 hover:text-white hover:bg-slate-800 rounded-lg transition-colors">High-Risk Accounts</a>
+                            <a href="/solutions/payment-gateway" class="block px-4 py-2 text-sm text-slate-300 hover:text-white hover:bg-slate-800 rounded-lg transition-colors">Payment Gateway</a>
+                            <a href="/solutions/chargeback-prevention" class="block px-4 py-2 text-sm text-slate-300 hover:text-white hover:bg-slate-800 rounded-lg transition-colors">Chargeback Prevention</a>
+                            <a href="/solutions/offshore-processing" class="block px-4 py-2 text-sm text-slate-300 hover:text-white hover:bg-slate-800 rounded-lg transition-colors">Offshore Processing</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative group">
+                    <button class="text-sm font-medium text-slate-300 group-hover:text-white flex items-center gap-1 transition-colors">
+                        Industries
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <!-- Dropdown positioned directly below button with padding-top to bridge gap -->
+                    <div class="absolute top-full left-0 pt-2 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                        <div class="bg-slate-900 border border-slate-700 rounded-xl shadow-2xl p-4">
+                            <a href="/industries/e-commerce" class="block px-4 py-2 text-sm text-slate-300 hover:text-white hover:bg-slate-800 rounded-lg transition-colors">E-Commerce</a>
+                            <a href="/industries/cbd-hemp" class="block px-4 py-2 text-sm text-slate-300 hover:text-white hover:bg-slate-800 rounded-lg transition-colors">CBD & Hemp</a>
+                            <a href="/industries/adult-entertainment" class="block px-4 py-2 text-sm text-slate-300 hover:text-white hover:bg-slate-800 rounded-lg transition-colors">Adult & Entertainment</a>
+                            <a href="/industries/forex-crypto" class="block px-4 py-2 text-sm text-slate-300 hover:text-white hover:bg-slate-800 rounded-lg transition-colors">Forex & Crypto</a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="/partners/partners" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Partners</a>
+            </div>
+
+            <div class="hidden lg:flex items-center gap-4">
+                <a href="#contact" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Contact Us</a>
+                <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" class="px-5 py-2 rounded-full bg-primary hover:bg-primary-dark text-white text-sm font-bold shadow-lg shadow-primary/20 transition-all duration-300 transform hover:-translate-y-0.5">
+                    Get Started
+                </button>
+            </div>
+
+            <button class="lg:hidden p-2 text-slate-300" id="mobile-menu-btn">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+    </div>
+    
+    <div id="mobile-menu" class="hidden lg:hidden bg-slate-900 border-b border-slate-800 p-4 absolute w-full left-0">
+         <div class="flex flex-col gap-4">
+            <a href="#" class="text-white font-medium">Solutions</a>
+            <a href="#" class="text-white font-medium">Industries</a>
+            <a href="#contact" class="text-white font-medium">Contact</a>
+            <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'}); document.getElementById('mobile-menu').classList.add('hidden');" class="w-full bg-primary text-white py-3 rounded-lg font-bold">Apply Now</button>
+        </div>
+    </div>
+</nav>
+

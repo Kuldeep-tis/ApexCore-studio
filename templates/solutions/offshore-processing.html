@@ -1,0 +1,113 @@
+{% extends "base/base.html" %}
+
+{% block title %}Offshore Processing | ApexCore Studios{% endblock %}
+
+{% block extra_head %}
+<style>
+    /* Wave Animation */
+    .wire-wave { fill: none; stroke: rgba(14, 165, 233, 0.3); stroke-width: 1; vector-effect: non-scaling-stroke; }
+    .wave-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; z-index: 0; }
+    @keyframes wave-drift { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+    .wave-group { animation: wave-drift 20s linear infinite; width: 200%; display: flex; }
+</style>
+{% endblock %}
+
+{% block content %}
+<section class="relative min-h-screen flex items-center overflow-hidden bg-background">
+    <div class="wave-container">
+        <svg class="absolute bottom-0 left-0 w-[200%] h-[60%] wave-group" preserveAspectRatio="none" viewBox="0 0 2000 400">
+            <path class="wire-wave" d="M0,200 C150,250 350,100 500,200 C650,300 850,150 1000,200 C1150,250 1350,100 1500,200 C1650,300 1850,150 2000,200" />
+            <path class="wire-wave" d="M0,220 C150,270 350,120 500,220 C650,320 850,170 1000,220 C1150,270 1350,120 1500,220 C1650,320 1850,170 2000,220" style="opacity: 0.8" />
+        </svg>
+        <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10 text-center pt-20">
+        <h1 class="text-5xl md:text-8xl font-display font-bold text-white mb-6">
+            Business Without <br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">Borders</span>
+        </h1>
+        <p class="text-xl text-slate-400 max-w-2xl mx-auto mb-12">
+            Establish your corporate presence in tax-friendly jurisdictions. Accept 135+ currencies and settle via Crypto or Swift.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4 animate-fade-in">
+            <div class="glass-card px-6 py-3 rounded-full flex items-center gap-3 text-white"><span class="text-slate-400">USD</span><span class="w-px h-4 bg-slate-700"></span>0.00% Conv.</div>
+            <div class="glass-card px-6 py-3 rounded-full flex items-center gap-3 border-primary/30 text-white"><span class="text-primary">USDT</span><span class="w-px h-4 bg-slate-700"></span>Instant Settlement</div>
+            <div class="glass-card px-6 py-3 rounded-full flex items-center gap-3 text-white"><span class="text-slate-400">EUR</span><span class="w-px h-4 bg-slate-700"></span>SEPA</div>
+        </div>
+    </div>
+</section>
+
+<section class="py-24 bg-surface relative">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+        <div>
+            <div class="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-xs font-bold mb-4">NEW FEATURE</div>
+            <h2 class="text-3xl font-display font-bold text-white mb-6">Crypto Settlement</h2>
+            <p class="text-slate-400 mb-6">Don't wait 5 days for a Swift wire. Settle your processing volume directly in USDT (TRC-20 or ERC-20) or Bitcoin.</p>
+            <ul class="space-y-3">
+                <li class="flex items-center gap-3 text-white"><svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Zero volatility risk (Stablecoin)</li>
+                <li class="flex items-center gap-3 text-white"><svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Same-day payouts</li>
+                <li class="flex items-center gap-3 text-white"><svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Privacy enhanced</li>
+            </ul>
+        </div>
+        <div class="glass-card p-8 rounded-2xl flex items-center justify-center">
+            <div class="text-center">
+                <div class="w-20 h-20 bg-green-500 rounded-full mx-auto mb-4 flex items-center justify-center text-3xl font-bold text-white">₮</div>
+                <h3 class="text-white font-bold text-xl">USDT Payouts</h3>
+                <p class="text-slate-400 text-sm mt-2">Active</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-24">
+    <div class="max-w-5xl mx-auto px-6">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-display font-bold text-white">Top Jurisdictions</h2>
+            <p class="text-slate-400">We help you incorporate where it matters.</p>
+        </div>
+        <div class="border border-slate-700 rounded-xl overflow-hidden">
+            <table class="w-full text-left text-slate-300">
+                <thead class="bg-slate-900 uppercase text-xs font-bold text-slate-500">
+                    <tr>
+                        <th class="px-6 py-4">Region</th>
+                        <th class="px-6 py-4">Processing Cap</th>
+                        <th class="px-6 py-4">Crypto Friendly</th>
+                        <th class="px-6 py-4">Setup Time</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-800 bg-slate-900/50">
+                    <tr>
+                        <td class="px-6 py-4 font-bold text-white">European Union (EU)</td>
+                        <td class="px-6 py-4">€5M / month</td>
+                        <td class="px-6 py-4 text-yellow-500">Moderate</td>
+                        <td class="px-6 py-4">3-4 Weeks</td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 font-bold text-white">United Kingdom</td>
+                        <td class="px-6 py-4">Uncapped</td>
+                        <td class="px-6 py-4 text-green-500">High</td>
+                        <td class="px-6 py-4">2 Weeks</td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 font-bold text-white">Caribbean / Offshore</td>
+                        <td class="px-6 py-4 text-primary font-bold">Uncapped</td>
+                        <td class="px-6 py-4 text-green-500">Very High</td>
+                        <td class="px-6 py-4">5-7 Days</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<section class="py-24 bg-surface border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+        <h2 class="text-3xl font-display font-bold text-white mb-6">No Entity? No Problem.</h2>
+        <p class="text-slate-400 max-w-2xl mx-auto mb-12">
+            Most offshore banks require a local presence. Our legal team handles company formation, nominee directors, and virtual office setup included in your package.
+        </p>
+        <button class="px-8 py-4 border border-slate-600 hover:border-white text-white rounded-full transition-all">Consult a Specialist</button>
+    </div>
+</section>
+{% endblock %}

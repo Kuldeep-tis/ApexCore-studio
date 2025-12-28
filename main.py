@@ -83,7 +83,49 @@ init_db()
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('base/index.html')
+
+@app.route('/solutions/high-risk-accounts')
+def high_risk_accounts():
+    return render_template('solutions/high-risk-accounts.html')
+
+@app.route('/solutions/payment-gateway')
+def payment_gateway():
+    return render_template('solutions/payment-gateway.html')
+
+@app.route('/solutions/chargeback-prevention')
+def chargeback_prevention():
+    return render_template('solutions/chargeback-prevention.html')
+
+@app.route('/solutions/offshore-processing')
+def offshore_processing():
+    return render_template('solutions/offshore-processing.html')
+
+# --- Industry Routes ---
+
+@app.route('/industries/e-commerce')
+def ecommerce():
+    return render_template('industries/e-commerce.html')
+
+@app.route('/industries/cbd-hemp')
+def cbd_hemp():
+    return render_template('industries/cbd-hemp.html')
+
+@app.route('/industries/adult-entertainment')
+def adult_entertainment():
+    return render_template('industries/adult-entertainment.html')
+
+@app.route('/industries/forex-crypto')
+def forex_crypto():
+    return render_template('industries/forex-crypto.html')
+
+@app.route('/partners/partners')
+def partners():
+    return render_template('partners/partners.html')
+
+
+
+
 
 @app.route('/chatbots')
 def chatbots():

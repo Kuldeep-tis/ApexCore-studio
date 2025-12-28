@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}ApexCore Studios | High-Performance Payment Infrastructure{% endblock %}</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='92 60 328 320'%3E%3Cpath d='M256 60 L420 224 L380 264 L256 140 L132 264 L92 224 Z' fill='%230B2A45'/%3E%3Cpath d='M256 180 L356 280 L256 380 L156 280 Z' fill='%231E73B9'/%3E%3C/svg%3E">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        // Premium Dark Navy Backgrounds
+                        background: "#020617", // Slate 950
+                        surface: "#0f172a",    // Slate 900
+                        
+                        // Brand Blue (from Logo)
+                        primary: {
+                            DEFAULT: "#0ea5e9", // Sky 500
+                            dark: "#0284c7",    // Sky 600
+                            glow: "rgba(14, 165, 233, 0.5)"
+                        },
+                        // Text Colors
+                        text: {
+                            main: "#f8fafc",   // Slate 50
+                            muted: "#94a3b8"   // Slate 400
+                        }
+                    },
+                    backgroundImage: {
+                        'gradient-hero': 'radial-gradient(circle at 50% 0%, rgba(14, 165, 233, 0.15) 0%, transparent 60%)',
+                        'gradient-card': 'linear-gradient(180deg, rgba(30, 41, 59, 0.5) 0%, rgba(15, 23, 42, 0.5) 100%)',
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-out forwards',
+                        'float': 'float 6s ease-in-out infinite',
+                        'scroll': 'scroll 30s linear infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(10px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        scroll: {
+                            '0%': { transform: 'translateX(0)' },
+                            '100%': { transform: 'translateX(-50%)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #020617;
+            color: #f8fafc;
+        }
+
+        /* Premium Glass Effects */
+        .glass-dark {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .glass-card {
+            background: linear-gradient(145deg, rgba(30, 41, 59, 0.4), rgba(15, 23, 42, 0.4));
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            border-color: rgba(14, 165, 233, 0.3);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 40px -10px rgba(14, 165, 233, 0.15);
+        }
+
+        .text-gradient {
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Map dots animation */
+        .dot {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background-color: #0ea5e9;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #0ea5e9;
+        }
+        .dot::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 1px solid #0ea5e9;
+            animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+        }
+        @keyframes pulse-ring {
+            0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+            100% { transform: translate(-50%, -50%) scale(4); opacity: 0; }
+        }
+
+        html { scroll-behavior: smooth; }
+    </style>
+
+    {% block extra_head %}{% endblock %}
+</head>
+<body class="antialiased">
+    {% include 'base/navbar.html' %}
+    
+    <main>
+        {% block content %}{% endblock %}
+        
+        {% include 'base/contact.html' %}
+    </main>
+
+    {% include 'base/footer.html' %}
+    
+    {% include 'base/chatbot.html' %}
+    
+    <script>
+        // Mobile menu toggle
+        if (document.getElementById('mobile-menu-btn') && !window.mobileMenuInitialized) {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+
+            if (btn && menu) {
+                btn.addEventListener('click', () => {
+                    menu.classList.toggle('hidden');
+                });
+                window.mobileMenuInitialized = true;
+            }
+        }
+    </script>
+
+    {% block extra_scripts %}{% endblock %}
+    
+    <script>
+        // Form submission and toast notification (shared across all pages)
+        if (document.getElementById('contact-form')) {
+            const contactForm = document.getElementById('contact-form');
+            const toast = document.getElementById('toast');
+            const toastIconSuccess = document.getElementById('toast-icon-success');
+            const toastIconError = document.getElementById('toast-icon-error');
+            const toastTitle = document.getElementById('toast-title');
+            const toastMessage = document.getElementById('toast-message');
+
+            function showToast(isSuccess, title, message) {
+                // Reset toast classes
+                toast.classList.remove('border-primary/30', 'border-red-500/30');
+
+                if (isSuccess) {
+                    // Success styling
+                    toast.classList.add('border-primary/30');
+                    toastIconSuccess.classList.remove('hidden');
+                    toastIconError.classList.add('hidden');
+                } else {
+                    // Error styling
+                    toast.classList.add('border-red-500/30');
+                    toastIconSuccess.classList.add('hidden');
+                    toastIconError.classList.remove('hidden');
+                }
+
+                // Update content
+                toastTitle.textContent = title;
+                toastMessage.textContent = message;
+
+                // Show toast
+                toast.classList.remove('opacity-0', 'translate-y-0', 'pointer-events-none');
+                toast.classList.add('opacity-100', '-translate-y-2');
+                
+                setTimeout(() => {
+                    toast.classList.remove('opacity-100', '-translate-y-2');
+                    toast.classList.add('opacity-0', 'translate-y-0', 'pointer-events-none');
+                }, 4000);
+            }
+
+            contactForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                
+                // Disable submit button to prevent double submission
+                const submitButton = contactForm.querySelector('button[type="submit"]');
+                const originalButtonText = submitButton.textContent;
+                submitButton.disabled = true;
+                submitButton.textContent = 'Submitting...';
+
+                try {
+                    const formData = new FormData(contactForm);
+                    const response = await fetch('/submit', {
+                        method: 'POST',
+                        body: formData
+                    });
+
+                    let data;
+                    try {
+                        data = await response.json();
+                    } catch (jsonError) {
+                        // If response is not JSON, treat as error
+                        throw new Error('Invalid response from server');
+                    }
+
+                    if (data.success) {
+                        // Success - show success toast and reset form
+                        showToast(true, 'Form Submitted Successfully!', data.message || 'We\'ll get back to you soon.');
+                        contactForm.reset();
+                    } else {
+                        // Error - show error toast
+                        showToast(false, 'Submission Failed', data.message || 'Please try again later.');
+                    }
+                } catch (error) {
+                    // Network or other error
+                    console.error('Error submitting form:', error);
+                    showToast(false, 'Submission Failed', 'An error occurred. Please check your connection and try again.');
+                } finally {
+                    // Re-enable submit button
+                    submitButton.disabled = false;
+                    submitButton.textContent = originalButtonText;
+                }
+            });
+        }
+    </script>
+</body>
+</html>
