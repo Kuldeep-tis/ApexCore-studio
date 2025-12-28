@@ -1,0 +1,105 @@
+{% extends "base/base.html" %}
+
+{% block title %}CBD & Hemp Merchant Services | ApexCore Studios{% endblock %}
+
+{% block content %}
+<section class="min-h-screen grid lg:grid-cols-2">
+    <div class="flex items-center justify-center p-8 lg:p-20 bg-background pt-32">
+        <div class="max-w-xl">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-green-500/30 bg-green-500/10 mb-6">
+                <span class="w-2 h-2 rounded-full bg-green-500"></span>
+                <span class="text-green-500 text-xs font-bold uppercase tracking-widest">Farm Bill Compliant</span>
+            </div>
+            <h1 class="text-5xl lg:text-7xl font-display font-bold text-white mb-6">
+                CBD Processing <br>
+                <span class="text-slate-500">Made Simple.</span>
+            </h1>
+            <p class="text-lg text-slate-400 mb-10">
+                Stop miscoding transactions to hide from banks. Get a legitimate, transparent domestic merchant account for oils, tinctures, and hemp products.
+            </p>
+            <form class="flex flex-col sm:flex-row gap-4">
+                <input type="email" placeholder="Enter your business email" class="flex-1 px-6 py-4 rounded-full bg-slate-900 border border-slate-700 text-white focus:border-green-500 outline-none">
+                <button class="px-8 py-4 bg-green-600 hover:bg-green-500 text-white rounded-full font-bold transition-all shadow-lg shadow-green-900/20">Get Rates</button>
+            </form>
+        </div>
+    </div>
+    <div class="relative h-[50vh] lg:h-full bg-slate-900 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1603569283847-aa295f0d016a?auto=format&fit=crop&q=80&w=1000" class="absolute inset-0 w-full h-full object-cover opacity-60 grayscale hover:grayscale-0 transition-all duration-700" alt="CBD Lab">
+        <div class="absolute inset-0 bg-gradient-to-r from-background to-transparent"></div>
+    </div>
+</section>
+
+<section class="py-24 bg-surface">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-display font-bold text-white mb-4">Fully Compliant Infrastructure</h2>
+            <p class="text-slate-400">We adhere to all federal and state regulations so your account stays open.</p>
+        </div>
+        <div class="grid md:grid-cols-4 gap-6">
+            <div class="p-6 border border-slate-700 rounded-xl bg-slate-900/50">
+                <div class="text-green-500 font-bold text-lg mb-2">Farm Bill 2018</div>
+                <p class="text-sm text-slate-400">Only < 0.3% THC products approved.</p>
+            </div>
+            <div class="p-6 border border-slate-700 rounded-xl bg-slate-900/50">
+                <div class="text-green-500 font-bold text-lg mb-2">COA Required</div>
+                <p class="text-sm text-slate-400">Certificate of Analysis verification.</p>
+            </div>
+            <div class="p-6 border border-slate-700 rounded-xl bg-slate-900/50">
+                <div class="text-green-500 font-bold text-lg mb-2">Transparent Coding</div>
+                <p class="text-sm text-slate-400">Correct MCC codes (5912/5122).</p>
+            </div>
+            <div class="p-6 border border-slate-700 rounded-xl bg-slate-900/50">
+                <div class="text-green-500 font-bold text-lg mb-2">Age Gating</div>
+                <p class="text-sm text-slate-400">Integration support for 21+ checks.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-24">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+        <div>
+            <h2 class="text-4xl font-display font-bold text-white mb-8">What We Approve</h2>
+            <ul class="space-y-4">
+                <li class="flex items-center gap-4 text-slate-300 p-4 border border-slate-800 rounded-lg hover:border-green-500/30 transition-colors">
+                    <span class="w-8 h-8 rounded-full bg-green-500/20 text-green-500 flex items-center justify-center">✓</span>
+                    CBD Oils & Tinctures
+                </li>
+                <li class="flex items-center gap-4 text-slate-300 p-4 border border-slate-800 rounded-lg hover:border-green-500/30 transition-colors">
+                    <span class="w-8 h-8 rounded-full bg-green-500/20 text-green-500 flex items-center justify-center">✓</span>
+                    Hemp Topicals & Creams
+                </li>
+                <li class="flex items-center gap-4 text-slate-300 p-4 border border-slate-800 rounded-lg hover:border-green-500/30 transition-colors">
+                    <span class="w-8 h-8 rounded-full bg-green-500/20 text-green-500 flex items-center justify-center">✓</span>
+                    Delta-8 / Delta-10 (State Dependent)
+                </li>
+                <li class="flex items-center gap-4 text-slate-300 p-4 border border-slate-800 rounded-lg hover:border-green-500/30 transition-colors">
+                    <span class="w-8 h-8 rounded-full bg-green-500/20 text-green-500 flex items-center justify-center">✓</span>
+                    Pet CBD Products
+                </li>
+            </ul>
+        </div>
+        <div class="relative">
+             <div class="absolute inset-0 bg-green-500/10 blur-[80px] rounded-full"></div>
+             <div class="glass-card p-8 rounded-2xl relative z-10 border border-green-500/20">
+                <h3 class="text-white font-bold mb-4">Required Documents</h3>
+                <div class="space-y-3">
+                    <div class="flex justify-between items-center text-sm text-slate-400 border-b border-slate-700 pb-2">
+                        <span>Lab Reports (COA)</span>
+                        <span class="text-green-400">Mandatory</span>
+                    </div>
+                    <div class="flex justify-between items-center text-sm text-slate-400 border-b border-slate-700 pb-2">
+                        <span>Fulfillment Agreement</span>
+                        <span class="text-green-400">Mandatory</span>
+                    </div>
+                    <div class="flex justify-between items-center text-sm text-slate-400 border-b border-slate-700 pb-2">
+                        <span>Bank Statements</span>
+                        <span class="text-green-400">3 Months</span>
+                    </div>
+                </div>
+                <button class="w-full mt-6 py-3 bg-green-600 hover:bg-green-500 text-white rounded-lg font-bold text-sm">Upload Documents</button>
+             </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

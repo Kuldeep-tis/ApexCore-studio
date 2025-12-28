@@ -1,0 +1,320 @@
+{% extends "base/base.html" %}
+
+{% block title %}Partner Program | ApexCore Studios{% endblock %}
+
+{% block content %}
+<section class="relative min-h-[85vh] flex items-center pt-20 overflow-hidden">
+    <div class="absolute inset-0 z-0">
+        <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-indigo-900/20 rounded-full blur-[120px]"></div>
+        <div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[100px]"></div>
+        <svg class="absolute inset-0 w-full h-full opacity-10" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" stroke-width="0.5"/>
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid)" class="text-white"/>
+        </svg>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10 w-full text-center">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-indigo-500/30 bg-indigo-500/10 backdrop-blur-sm mb-6 animate-fade-in">
+            <span class="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></span>
+            <span class="text-indigo-300 text-xs font-bold uppercase tracking-widest">ISO & Agent Program</span>
+        </div>
+        
+        <h1 class="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-white mb-8 animate-fade-in leading-tight">
+            Earn <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">Lifetime</span> <br>
+            Residuals.
+        </h1>
+        
+        <p class="text-xl text-slate-400 max-w-2xl mx-auto mb-10 animate-fade-in">
+            Partner with the high-risk processor that actually approves your deals. 
+            Get paid up to <span class="text-white font-bold">70% revenue share</span> on every transaction your merchants process. Forever.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in">
+            <a href="#register" class="px-10 py-4 rounded-full bg-white text-slate-900 font-bold hover:bg-slate-200 transition-all shadow-[0_0_30px_rgba(255,255,255,0.2)]">Become a Partner</a>
+            <button onclick="document.getElementById('calculator').scrollIntoView({behavior: 'smooth'})" class="px-10 py-4 rounded-full border border-slate-700 text-white hover:bg-slate-800 transition-all flex items-center gap-2">
+                Calculate Earnings <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+        </div>
+    </div>
+</section>
+
+<section class="py-12 border-y border-slate-800 bg-slate-950/50">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
+        <p class="text-slate-500 text-sm uppercase tracking-widest whitespace-nowrap">Direct Integrations With:</p>
+        <div class="flex flex-wrap items-center justify-center md:justify-end gap-12 w-full opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+             <span class="text-xl font-bold text-white">Esquire Bank</span>
+             <span class="text-xl font-bold text-white">Priority</span>
+             <span class="text-xl font-bold text-white">NMI</span>
+             <span class="text-xl font-bold text-white">Authorize.net</span>
+             <span class="text-xl font-bold text-white">Cybersource</span>
+        </div>
+    </div>
+</section>
+
+<section class="py-24 bg-surface">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="mb-16">
+            <h2 class="text-3xl font-display font-bold text-white mb-4">Why Top Agents Switch to Us</h2>
+            <p class="text-slate-400">Stop losing deals to "Policy Declines". We get the tough files approved.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[300px]">
+            <div class="md:col-span-2 bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-8 border border-slate-700 relative overflow-hidden group">
+                <div class="relative z-10">
+                    <div class="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center text-green-500 mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-3xl font-bold text-white mb-4">50% - 70% Net Revenue Share</h3>
+                    <p class="text-slate-400 max-w-md">The most aggressive splits in the industry. We pay on everything: discount rate, transaction fees, and cross-border fees. No hidden "buy rates" eating your margin.</p>
+                </div>
+                <div class="absolute right-0 bottom-0 w-64 h-64 bg-green-500/10 rounded-full blur-[80px] group-hover:bg-green-500/20 transition-colors"></div>
+            </div>
+
+            <div class="md:row-span-2 bg-slate-900 rounded-3xl p-8 border border-slate-700 flex flex-col relative overflow-hidden group">
+                <div class="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center text-primary mb-6">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-4">99% Approval Rate</h3>
+                <p class="text-slate-400 mb-8">Don't burn leads. We have 15+ banking partners. If Bank A says no, Bank B says yes. We monetize deals others trash.</p>
+                
+                <div class="mt-auto space-y-3">
+                    <div class="flex items-center gap-3 p-3 bg-slate-800/50 rounded-lg border border-slate-700">
+                        <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                        <div class="text-xs text-white">High-Risk CBD <span class="text-slate-500 ml-2">Approved 2m ago</span></div>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-slate-800/50 rounded-lg border border-slate-700">
+                        <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                        <div class="text-xs text-white">Adult VOD <span class="text-slate-500 ml-2">Approved 15m ago</span></div>
+                    </div>
+                     <div class="flex items-center gap-3 p-3 bg-slate-800/50 rounded-lg border border-slate-700">
+                        <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                        <div class="text-xs text-white">Forex Broker <span class="text-slate-500 ml-2">Approved 1h ago</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-slate-900 rounded-3xl p-8 border border-slate-700 group hover:border-primary/50 transition-colors">
+                <div class="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center text-purple-500 mb-6">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">Weekly Payouts</h3>
+                <p class="text-slate-400 text-sm">Consistent cash flow. Residuals paid every Friday like clockwork.</p>
+            </div>
+
+            <div class="bg-slate-900 rounded-3xl p-8 border border-slate-700 group hover:border-primary/50 transition-colors">
+                <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center text-orange-500 mb-6">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">No Exclusivity</h3>
+                <p class="text-slate-400 text-sm">Keep your existing relationships. Use us purely for your high-risk declines.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="calculator" class="py-24 relative overflow-hidden">
+    <div class="absolute inset-0 bg-primary/5"></div>
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center relative z-10">
+        <div>
+            <h2 class="text-4xl font-display font-bold text-white mb-6">Calculate Your Potential</h2>
+            <p class="text-slate-400 text-lg mb-8">
+                High-risk merchants process higher volumes and pay higher rates. That means significantly higher residuals for you compared to standard retail accounts.
+            </p>
+            
+            <div class="space-y-8">
+                <div>
+                    <div class="flex justify-between text-sm text-white mb-2 font-bold">
+                        <span>Total Monthly Volume</span>
+                        <span>$500,000</span>
+                    </div>
+                    <div class="h-2 bg-slate-700 rounded-full">
+                        <div class="w-[40%] h-full bg-primary rounded-full relative">
+                            <div class="absolute right-0 top-1/2 -translate-y-1/2 w-4 h-4 bg-white rounded-full shadow-lg cursor-pointer"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="flex justify-between text-sm text-white mb-2 font-bold">
+                        <span>Average Margin (Basis Points)</span>
+                        <span>150 bps</span>
+                    </div>
+                    <div class="h-2 bg-slate-700 rounded-full">
+                        <div class="w-[60%] h-full bg-primary rounded-full relative">
+                            <div class="absolute right-0 top-1/2 -translate-y-1/2 w-4 h-4 bg-white rounded-full shadow-lg cursor-pointer"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-900 border border-slate-700 p-8 rounded-2xl flex items-center justify-between">
+                    <div>
+                        <div class="text-slate-400 text-sm mb-1">Your Monthly Residual</div>
+                        <div class="text-4xl font-bold text-white">$4,500<span class="text-primary">.00</span></div>
+                    </div>
+                    <div class="text-right">
+                        <div class="text-slate-400 text-sm mb-1">Annual Value</div>
+                        <div class="text-xl font-bold text-green-400">$54,000</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="relative h-[400px] w-full bg-slate-900 border border-slate-700 rounded-2xl p-6 flex flex-col">
+            <h3 class="text-slate-400 text-sm uppercase tracking-widest mb-6">Portfolio Growth Projection</h3>
+            
+            <div class="flex-1 flex items-end justify-between gap-4 px-4 pb-4 border-b border-slate-700">
+                <div class="w-full bg-slate-800 rounded-t-lg h-[20%] group relative">
+                    <div class="absolute -top-8 left-1/2 -translate-x-1/2 text-xs text-white opacity-0 group-hover:opacity-100 transition-opacity">$2k</div>
+                </div>
+                <div class="w-full bg-slate-800 rounded-t-lg h-[35%] group relative">
+                     <div class="absolute -top-8 left-1/2 -translate-x-1/2 text-xs text-white opacity-0 group-hover:opacity-100 transition-opacity">$4.5k</div>
+                </div>
+                <div class="w-full bg-slate-800 rounded-t-lg h-[50%] group relative">
+                     <div class="absolute -top-8 left-1/2 -translate-x-1/2 text-xs text-white opacity-0 group-hover:opacity-100 transition-opacity">$8k</div>
+                </div>
+                <div class="w-full bg-gradient-to-t from-primary/50 to-primary rounded-t-lg h-[75%] group relative shadow-[0_0_20px_rgba(14,165,233,0.3)]">
+                     <div class="absolute -top-8 left-1/2 -translate-x-1/2 text-xs font-bold text-primary opacity-100">$12k</div>
+                </div>
+                <div class="w-full bg-slate-800 rounded-t-lg h-[90%] group relative opacity-50"></div>
+            </div>
+            <div class="flex justify-between px-4 pt-2 text-xs text-slate-500">
+                <span>Month 1</span>
+                <span>Month 3</span>
+                <span>Month 6</span>
+                <span>Month 12</span>
+                <span>Month 18</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-24 bg-surface">
+    <div class="max-w-7xl mx-auto px-6 text-center mb-16">
+        <h2 class="text-3xl font-display font-bold text-white mb-4">Total Transparency</h2>
+        <p class="text-slate-400 max-w-2xl mx-auto">Track every click, application status, and commission penny in real-time with our custom Partner Portal.</p>
+    </div>
+
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="relative rounded-2xl border border-slate-700 bg-[#0B1120] shadow-2xl overflow-hidden">
+            <div class="h-16 border-b border-slate-800 flex items-center px-6 justify-between bg-slate-900/50">
+                <div class="flex items-center gap-4">
+                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                    <div class="h-6 w-px bg-slate-700 mx-2"></div>
+                    <span class="text-slate-300 font-bold text-sm">ApexCore Partner Portal</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <div class="text-right">
+                        <div class="text-xs text-slate-400">Logged in as</div>
+                        <div class="text-xs text-white font-bold">John Doe (ISO)</div>
+                    </div>
+                    <div class="w-8 h-8 bg-primary rounded-full"></div>
+                </div>
+            </div>
+
+            <div class="p-8 grid grid-cols-12 gap-6">
+                <div class="col-span-2 hidden md:block space-y-4">
+                    <div class="h-10 bg-primary/10 rounded-lg text-primary flex items-center px-4 text-sm font-bold border-l-2 border-primary">Dashboard</div>
+                    <div class="h-10 text-slate-400 flex items-center px-4 text-sm hover:text-white cursor-pointer">Merchants</div>
+                    <div class="h-10 text-slate-400 flex items-center px-4 text-sm hover:text-white cursor-pointer">Commissions</div>
+                    <div class="h-10 text-slate-400 flex items-center px-4 text-sm hover:text-white cursor-pointer">Marketing Tools</div>
+                </div>
+
+                <div class="col-span-12 md:col-span-10 grid grid-cols-3 gap-6">
+                    <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50">
+                        <div class="text-slate-400 text-xs uppercase tracking-wide mb-2">Total Processing</div>
+                        <div class="text-2xl font-bold text-white">$1,240,500</div>
+                        <div class="text-green-500 text-xs mt-1">▲ 12% vs last month</div>
+                    </div>
+                    <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50">
+                        <div class="text-slate-400 text-xs uppercase tracking-wide mb-2">Active Merchants</div>
+                        <div class="text-2xl font-bold text-white">42</div>
+                        <div class="text-green-500 text-xs mt-1">+3 New this week</div>
+                    </div>
+                     <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 relative overflow-hidden">
+                        <div class="text-slate-400 text-xs uppercase tracking-wide mb-2">Unpaid Residuals</div>
+                        <div class="text-2xl font-bold text-primary">$8,350.25</div>
+                        <div class="text-slate-400 text-xs mt-1">Next payout: Friday</div>
+                        <div class="absolute right-0 bottom-0 opacity-10 text-primary">
+                            <svg class="w-16 h-16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1.41 16.09V20h-2.67v-1.93c-1.71-.36-3.16-1.46-3.27-3.4h1.96c.1 1.05 1.18 1.91 2.53 1.91 1.29 0 2.13-.72 2.13-1.71 0-1.1-1.05-1.58-2.6-1.93-2.02-.46-3.96-1.14-3.96-3.68 0-2.01 1.55-3.34 3.21-3.71V3h2.67v1.93c1.5.25 2.91 1.26 3.11 3.26h-1.95c-.13-1.07-1.14-1.84-2.5-1.84-1.28 0-2.04.81-2.04 1.66 0 .96.9 1.45 2.56 1.83 2.15.48 4 1.25 4 3.75 0 1.98-1.5 3.36-3.16 3.74z"></path></svg>
+                        </div>
+                    </div>
+                    
+                    <div class="col-span-3 bg-slate-800/50 h-48 rounded-xl border border-slate-700/50 flex items-center justify-center text-slate-500 text-sm">
+                        [Interactive Revenue Graph Placeholder]
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-24">
+    <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-3xl font-display font-bold text-white mb-12 text-center">Who We Work With</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="p-6 border-l-2 border-primary bg-slate-900/30">
+                <h4 class="text-white font-bold mb-2">ISOs & MSPs</h4>
+                <p class="text-sm text-slate-400">Expand your portfolio with our high-risk BINs. White-label options available.</p>
+            </div>
+            <div class="p-6 border-l-2 border-primary bg-slate-900/30">
+                <h4 class="text-white font-bold mb-2">Web Developers</h4>
+                <p class="text-sm text-slate-400">Integrate our gateway for your clients and earn on every transaction they make.</p>
+            </div>
+            <div class="p-6 border-l-2 border-primary bg-slate-900/30">
+                <h4 class="text-white font-bold mb-2">SaaS Platforms</h4>
+                <p class="text-sm text-slate-400">Monetize your payments layer. Seamless API integration for your users.</p>
+            </div>
+            <div class="p-6 border-l-2 border-primary bg-slate-900/30">
+                <h4 class="text-white font-bold mb-2">Affiliate Marketers</h4>
+                <p class="text-sm text-slate-400">Refer merchants via your unique link. Simple setup, automated tracking.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-24 bg-surface border-t border-slate-800">
+    <div class="max-w-3xl mx-auto px-6">
+        <h2 class="text-3xl font-display font-bold text-white mb-12 text-center">Partner FAQ</h2>
+        
+        <div class="space-y-4">
+            <div class="border border-slate-700 rounded-lg bg-slate-900 overflow-hidden">
+                <button class="w-full px-6 py-4 text-left flex justify-between items-center text-white font-medium hover:bg-slate-800" onclick="this.nextElementSibling.classList.toggle('hidden');">
+                    <span>Do you offer a buy rate or revenue share?</span>
+                    <span class="text-primary">+</span>
+                </button>
+                <div class="hidden px-6 py-4 text-slate-400 text-sm border-t border-slate-800">
+                    We offer both models. Experienced ISOs often prefer a low buy rate to mark up themselves, while affiliates prefer a flat 50-70% net revenue share. We customize the deal to your needs.
+                </div>
+            </div>
+
+            <div class="border border-slate-700 rounded-lg bg-slate-900 overflow-hidden">
+                <button class="w-full px-6 py-4 text-left flex justify-between items-center text-white font-medium hover:bg-slate-800" onclick="this.nextElementSibling.classList.toggle('hidden');">
+                    <span>When are commissions paid?</span>
+                    <span class="text-primary">+</span>
+                </button>
+                <div class="hidden px-6 py-4 text-slate-400 text-sm border-t border-slate-800">
+                    Residuals are calculated monthly and paid on the 20th of the following month. For high-volume partners, we can arrange weekly payouts.
+                </div>
+            </div>
+
+            <div class="border border-slate-700 rounded-lg bg-slate-900 overflow-hidden">
+                <button class="w-full px-6 py-4 text-left flex justify-between items-center text-white font-medium hover:bg-slate-800" onclick="this.nextElementSibling.classList.toggle('hidden');">
+                    <span>Can I white-label your gateway?</span>
+                    <span class="text-primary">+</span>
+                </button>
+                <div class="hidden px-6 py-4 text-slate-400 text-sm border-t border-slate-800">
+                    Yes. Qualified partners can brand the entire merchant dashboard with their own logo, colors, and domain name (e.g., payments.youragency.com).
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

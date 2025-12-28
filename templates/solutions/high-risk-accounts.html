@@ -1,0 +1,187 @@
+{% extends "base/base.html" %}
+
+{% block title %}High-Risk Accounts | ApexCore Studios{% endblock %}
+
+{% block content %}
+<section class="relative min-h-[85vh] flex items-center overflow-hidden pt-20">
+    <div class="absolute inset-0 z-0">
+        <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/10 rounded-full blur-[120px]"></div>
+        <div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue-900/10 rounded-full blur-[100px]"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-16 items-center">
+        <div class="animate-fade-in">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-green-500/30 bg-green-500/10 backdrop-blur-sm mb-6">
+                <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                <span class="text-xs font-bold text-green-400 uppercase tracking-widest">99% Approval Rate</span>
+            </div>
+            <h1 class="text-5xl lg:text-7xl font-display font-bold text-white leading-tight mb-6">
+                The Bank That <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-300">Never Sleeps</span>
+            </h1>
+            <p class="text-slate-400 text-lg mb-8 leading-relaxed max-w-xl">
+                Tired of stripe freezing your funds? We provide stable, high-capacity Merchant IDs (MIDs) specifically for high-risk industries. 
+            </p>
+            <div class="flex flex-wrap gap-4">
+                <a href="#contact" class="px-8 py-4 bg-primary hover:bg-primary-dark text-white rounded-full font-bold transition-all shadow-[0_0_20px_rgba(14,165,233,0.3)]">Start Application</a>
+                <a href="#checklist" class="px-8 py-4 bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 rounded-full font-medium transition-all">View Requirements</a>
+            </div>
+        </div>
+        <div class="relative hidden lg:block animate-fade-in" style="animation-delay: 0.2s">
+            <div class="relative w-96 h-96 mx-auto">
+                <div class="absolute inset-0 bg-gradient-to-tr from-slate-800 to-slate-900 border border-slate-700 rounded-2xl transform rotate-6 z-10 p-6 shadow-2xl">
+                    <div class="flex justify-between items-center mb-8">
+                        <div class="h-8 w-12 bg-slate-700 rounded"></div>
+                        <div class="h-4 w-4 rounded-full bg-green-500"></div>
+                    </div>
+                    <div class="text-4xl font-bold text-white mb-2">$150,000</div>
+                    <div class="text-sm text-slate-400">Daily Limit: Uncapped</div>
+                </div>
+                <div class="absolute inset-0 bg-primary/20 rounded-2xl transform -rotate-6 z-0 scale-95 blur-sm"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-24 bg-surface relative border-y border-slate-800">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-5xl font-display font-bold text-white mb-4">Intelligent <span class="text-primary">Load Balancing</span></h2>
+            <p class="text-slate-400 max-w-2xl mx-auto">We don't just give you one account. We connect you to multiple banks simultaneously to ensure 100% uptime.</p>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="p-8 rounded-2xl bg-slate-900 border border-slate-700 hover:border-primary/50 transition-colors">
+                <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+                    <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">Volume Distribution</h3>
+                <p class="text-slate-400 text-sm">Automatically split sales across multiple MIDs to keep monthly ratios low and banks happy.</p>
+            </div>
+            <div class="p-8 rounded-2xl bg-slate-900 border border-slate-700 hover:border-primary/50 transition-colors">
+                <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+                    <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">Failover Protection</h3>
+                <p class="text-slate-400 text-sm">If Bank A declines a transaction due to risk, our system instantly routes it to Bank B. Save 15% of lost sales.</p>
+            </div>
+            <div class="p-8 rounded-2xl bg-slate-900 border border-slate-700 hover:border-primary/50 transition-colors">
+                <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+                    <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">One Dashboard</h3>
+                <p class="text-slate-400 text-sm">View reports from 5 different banks in one single, unified ApexCore dashboard.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-24 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+        <div>
+            <h2 class="text-3xl md:text-5xl font-display font-bold text-white mb-6">Next Day Funding. <br><span class="text-primary">Really.</span></h2>
+            <p class="text-slate-400 text-lg mb-8">
+                Cash flow is king. Unlike other high-risk processors that hold funds for 7-14 days, ApexCore offers qualified merchants next-day settlement.
+            </p>
+            <ul class="space-y-4">
+                <li class="flex items-center text-slate-300">
+                    <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    Batch out by 9PM EST, funds in account by 8AM.
+                </li>
+                <li class="flex items-center text-slate-300">
+                    <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    Available for US, CA, and EU merchants.
+                </li>
+                <li class="flex items-center text-slate-300">
+                    <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    Weekend settlement options available.
+                </li>
+            </ul>
+        </div>
+        <div class="relative">
+            <div class="absolute inset-0 bg-primary/20 blur-[60px] rounded-full"></div>
+            <div class="glass-card p-8 rounded-2xl relative z-10 border border-slate-600">
+                <div class="flex justify-between items-end mb-6">
+                    <div>
+                        <div class="text-slate-400 text-sm mb-1">Available Balance</div>
+                        <div class="text-4xl font-bold text-white">$42,850.00</div>
+                    </div>
+                    <div class="bg-green-500/20 text-green-400 px-3 py-1 rounded text-xs font-bold">SENT</div>
+                </div>
+                <div class="h-2 bg-slate-700 rounded-full overflow-hidden">
+                    <div class="h-full w-full bg-primary animate-pulse"></div>
+                </div>
+                <div class="mt-4 text-xs text-slate-500 text-right">Arriving tomorrow, 08:30 AM</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-20 bg-surface">
+    <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-3xl font-display font-bold text-white text-center mb-12">We Love "Hard to Place" Industries</h2>
+        <div class="flex flex-wrap justify-center gap-4">
+            <span class="px-6 py-3 rounded-lg border border-slate-700 bg-slate-800 text-slate-300 hover:border-primary hover:text-white transition-all cursor-default">Adult Entertainment</span>
+            <span class="px-6 py-3 rounded-lg border border-slate-700 bg-slate-800 text-slate-300 hover:border-primary hover:text-white transition-all cursor-default">CBD & Hemp</span>
+            <span class="px-6 py-3 rounded-lg border border-slate-700 bg-slate-800 text-slate-300 hover:border-primary hover:text-white transition-all cursor-default">Nutraceuticals</span>
+            <span class="px-6 py-3 rounded-lg border border-slate-700 bg-slate-800 text-slate-300 hover:border-primary hover:text-white transition-all cursor-default">Credit Repair</span>
+            <span class="px-6 py-3 rounded-lg border border-slate-700 bg-slate-800 text-slate-300 hover:border-primary hover:text-white transition-all cursor-default">Forex & Crypto</span>
+            <span class="px-6 py-3 rounded-lg border border-slate-700 bg-slate-800 text-slate-300 hover:border-primary hover:text-white transition-all cursor-default">Tech Support</span>
+            <span class="px-6 py-3 rounded-lg border border-slate-700 bg-slate-800 text-slate-300 hover:border-primary hover:text-white transition-all cursor-default">Travel & Airlines</span>
+            <span class="px-6 py-3 rounded-lg border border-slate-700 bg-slate-800 text-slate-300 hover:border-primary hover:text-white transition-all cursor-default">Subscription Boxes</span>
+        </div>
+    </div>
+</section>
+
+<section class="py-24">
+    <div class="max-w-5xl mx-auto px-6">
+        <div class="glass-card rounded-2xl overflow-hidden border border-slate-700">
+            <div class="grid grid-cols-3 bg-slate-900/80 p-6 border-b border-slate-700">
+                <div class="col-span-1 text-slate-500 font-medium">Feature</div>
+                <div class="col-span-1 text-slate-400 font-medium text-center">Stripe / Square</div>
+                <div class="col-span-1 text-primary font-bold text-center">ApexCore</div>
+            </div>
+            
+            <div class="grid grid-cols-3 p-6 border-b border-slate-700/50 items-center">
+                <div class="col-span-1 text-white font-medium">Risk Tolerance</div>
+                <div class="col-span-1 text-red-400 text-center text-sm">Low (Zero Tolerance)</div>
+                <div class="col-span-1 text-green-400 text-center text-sm font-bold">High (Specialized)</div>
+            </div>
+            <div class="grid grid-cols-3 p-6 border-b border-slate-700/50 items-center">
+                <div class="col-span-1 text-white font-medium">Volume Caps</div>
+                <div class="col-span-1 text-red-400 text-center text-sm">$25k - $50k / mo</div>
+                <div class="col-span-1 text-green-400 text-center text-sm font-bold">Uncapped</div>
+            </div>
+            <div class="grid grid-cols-3 p-6 items-center">
+                <div class="col-span-1 text-white font-medium">Customer Service</div>
+                <div class="col-span-1 text-red-400 text-center text-sm">Automated Bots</div>
+                <div class="col-span-1 text-green-400 text-center text-sm font-bold">Dedicated Agent</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="checklist" class="py-24 bg-surface">
+    <div class="max-w-4xl mx-auto px-6">
+        <h2 class="text-3xl font-display font-bold text-white mb-8">What You Need to Apply</h2>
+        <div class="grid md:grid-cols-2 gap-4">
+            <div class="flex items-start gap-4 p-4 border border-slate-700 rounded-lg">
+                <div class="w-6 h-6 rounded-full bg-slate-800 text-slate-400 flex items-center justify-center text-xs">1</div>
+                <div><h4 class="text-white font-bold">Articles of Incorporation</h4><p class="text-xs text-slate-500">Legal business entity proof.</p></div>
+            </div>
+             <div class="flex items-start gap-4 p-4 border border-slate-700 rounded-lg">
+                <div class="w-6 h-6 rounded-full bg-slate-800 text-slate-400 flex items-center justify-center text-xs">2</div>
+                <div><h4 class="text-white font-bold">Govt Issued ID</h4><p class="text-xs text-slate-500">Color copy of driver's license or passport.</p></div>
+            </div>
+             <div class="flex items-start gap-4 p-4 border border-slate-700 rounded-lg">
+                <div class="w-6 h-6 rounded-full bg-slate-800 text-slate-400 flex items-center justify-center text-xs">3</div>
+                <div><h4 class="text-white font-bold">3 Months Bank Statements</h4><p class="text-xs text-slate-500">Personal or business statements.</p></div>
+            </div>
+             <div class="flex items-start gap-4 p-4 border border-slate-700 rounded-lg">
+                <div class="w-6 h-6 rounded-full bg-slate-800 text-slate-400 flex items-center justify-center text-xs">4</div>
+                <div><h4 class="text-white font-bold">Voided Check</h4><p class="text-xs text-slate-500">Or bank letter for deposit confirmation.</p></div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
