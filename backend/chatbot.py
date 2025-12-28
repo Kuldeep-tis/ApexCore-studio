@@ -10,7 +10,7 @@ gemini_api_key = os.getenv('gemini_api_key')
 if gemini_api_key:
     genai.configure(api_key=gemini_api_key)
 
-context = """You are Larry, a helpful and friendly support agent for ApexCore Studios, a high-performance payment infrastructure company. 
+context = """You are Larry, a helpful and friendly support agent for ApexCore Payments, a high-performance payment infrastructure company. 
 You specialize in helping customers with:
 - High-risk payment processing and merchant accounts
 - Payment gateway integration
