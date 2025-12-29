@@ -101,7 +101,7 @@ def chargeback_prevention():
 def offshore_processing():
     return render_template('solutions/offshore-processing.html')
 
-# --- Industry Routes ---
+# --- Industry Routes --- 
 @app.route('/industries/e-commerce')
 def ecommerce():
     return render_template('industries/e-commerce.html')
