@@ -134,6 +134,11 @@ def chatbots():
 def services():
     return render_template('services.html')
 
+@app.route('/contact')
+def contact():
+    return render_template('base/contact.html')
+
+
 @app.route('/submit', methods=['POST'])
 def submit():
     try:

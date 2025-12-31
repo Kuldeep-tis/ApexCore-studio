@@ -10,16 +10,17 @@ gemini_api_key = os.getenv('gemini_api_key')
 if gemini_api_key:
     genai.configure(api_key=gemini_api_key)
 
-context = """You are Larry, a helpful and friendly support agent for ApexCore Payments, a high-performance payment infrastructure company. 
-You specialize in helping customers with:
-- High-risk payment processing and merchant accounts
-- Payment gateway integration
-- Chargeback prevention
-- Offshore merchant accounts
-- Multi-currency processing
-- Industry-specific solutions (CBD, forex, adult entertainment, etc.)
+# UPDATED PROMPT: Strict instruction for short answers
+context = """You are Leo, a support agent for ApexCore Payments. 
+CRITICAL RULE: Keep every answer under 3 sentences. Be punchy, direct, and professional. No fluff.
 
-Be professional, knowledgeable, and helpful. Keep responses concise and informative. If you don't know something, suggest they contact the sales team."""
+You help with:
+- High-risk merchant accounts (99% approval)
+- Payment gateways & APIs
+- Chargeback prevention
+- Offshore accounts
+
+If you don't know, say: "Please contact our sales team for that specific detail." """
 
 # Function to get available models (cached)
 _available_model = None
@@ -62,7 +63,7 @@ def get_response(user_input):
         model = genai.GenerativeModel(model_name)
         
         # Create the full prompt
-        prompt = f"{context}\n\nUser question: {user_input}\n\nLarry's response:"
+        prompt = f"{context}\n\nUser question: {user_input}\n\nLeo's response:"
         
         # Generate response
         response = model.generate_content(prompt)
@@ -88,7 +89,7 @@ def get_response(user_input):
             try:
                 print(f"Trying fallback model: {fallback_model}")
                 model = genai.GenerativeModel(fallback_model)
-                prompt = f"{context}\n\nUser question: {user_input}\n\nLarry's response:"
+                prompt = f"{context}\n\nUser question: {user_input}\n\nLeo's response:"
                 response = model.generate_content(prompt)
                 if response.text:
                     _available_model = fallback_model

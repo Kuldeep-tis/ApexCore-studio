@@ -11,7 +11,7 @@
                     </svg>
                 </div>
                 <div class="min-w-0">
-                    <h3 class="text-white font-bold text-xs sm:text-sm truncate">Larry</h3>
+                    <h3 class="text-white font-bold text-xs sm:text-sm truncate">Leo</h3>
                     <p class="text-slate-400 text-xs truncate">ApexCore Support</p>
                 </div>
             </div>
@@ -31,7 +31,7 @@
                 </div>
                 <div class="flex-1 min-w-0">
                     <div class="bg-slate-800/80 border border-slate-700 rounded-2xl rounded-tl-sm px-3 py-2 sm:px-4 sm:py-3">
-                        <p class="text-slate-200 text-xs sm:text-sm break-words">Hi! I'm Larry, your ApexCore support agent. How can I help you today? I can answer questions about our payment processing services, high-risk accounts, or help you get started.</p>
+                        <p class="text-slate-200 text-xs sm:text-sm break-words">Hi! I'm Leo, your ApexCore support agent. How can I help you today? I can answer questions about our payment processing services, high-risk accounts, or help you get started.</p>
                     </div>
                     <span class="text-xs text-slate-500 mt-1 block">Just now</span>
                 </div>
@@ -72,23 +72,21 @@
 </div>
 
 <script>
-    // Predefined responses from Larry
-    const larryResponses = [
-        "Great question! At ApexCore, we specialize in high-risk payment processing. We can help you get approved for a merchant account in as little as 24 hours, even if traditional banks have rejected you.",
-        "We support 135+ currencies and offer both domestic and offshore merchant accounts. Our approval rate is 99%, and we work with industries like CBD, forex, adult entertainment, and more.",
-        "Our chargeback protection tool is one of our most popular features. It uses AI to detect and prevent fraudulent transactions before they happen, saving merchants an average of 15% in revenue.",
-        "Yes, we offer instant approvals! Our AI-driven underwriting process can get you pre-approved within 24 hours. No more waiting weeks for an answer from traditional banks.",
-        "We have no monthly processing limits, which makes us perfect for high-growth businesses. You can scale without worrying about hitting caps or having your account frozen.",
-        "Our setup process is simple: 1) Fill out our 5-minute application, 2) Upload your documents, 3) We negotiate with the banks, 4) Integrate our API and start processing. Most clients are up and running within 48 hours.",
-        "We're verified partners with 15+ Tier-1 banks worldwide. This gives us access to better rates and more flexible terms than you'd get going directly to a bank.",
-        "Our fees are transparent - no setup fees, no hidden costs. We make money when you make money, so our success is tied to yours. Contact our sales team for a custom quote based on your volume.",
-        "We support all major payment methods: credit cards, debit cards, ACH, e-checks, and even crypto in some cases. Our payment gateway integrates seamlessly with Shopify, WooCommerce, and custom solutions.",
-        "Absolutely! We specialize in helping businesses that have been shut down by other processors. We understand high-risk industries and work with banks that are comfortable with your business model.",
-        "Our global settlement options allow you to accept payments in multiple currencies and settle in your local bank account. This is perfect for international businesses.",
-        "Security is our top priority. We're PCI DSS Level 1 compliant and use bank-level encryption for all transactions. Your customers' data is always protected.",
-        "We offer 24/7 support to all our clients. Whether you need technical help with integration or have questions about your account, our team is always available.",
-        "Our partner program offers generous residuals for ISOs and referral agents. If you're interested in becoming a partner, I can connect you with our partnership team.",
-        "We process millions in transactions monthly for businesses across various high-risk industries. Our platform is built to handle high volume and scale with your growth."
+    // Predefined responses from Leo
+    const LeoResponses = [
+        "We specialize in high-risk processing. We can get you approved in 24 hours, even if banks rejected you.",
+        "We support 135+ currencies and offer domestic/offshore accounts with a 99% approval rate.",
+        "Our chargeback shield uses AI to stop disputes before they happen, saving you roughly 15% in revenue.",
+        "Yes, we offer instant approvals! Our AI underwriting gets you pre-approved in 24 hours.",
+        "We have no monthly volume caps. You can scale as fast as you want without fear of freezes.",
+        "Setup is easy: 1) 5-min app, 2) Upload docs, 3) We integrate. You're live in 48 hours.",
+        "We partner with 15+ Tier-1 banks to get you better rates than going direct.",
+        "Transparent pricing with no hidden fees. Contact sales for a custom volume-based quote.",
+        "We accept cards, ACH, e-checks, and crypto. Our gateway integrates with Shopify, Woo, and more.",
+        "We help businesses shut down by Stripe or PayPal. We love high-risk industries.",
+        "Security is #1. We are PCI DSS Level 1 compliant and fully encrypted.",
+        "We offer 24/7 support. Our team is always here to help with tech or account questions.",
+        "Our partner program pays aggressive residuals. Ask me how to become an agent."
     ];
 
     // Get DOM elements
@@ -152,7 +150,7 @@
                     <div class="bg-slate-800/80 border border-slate-700 rounded-2xl rounded-tl-sm px-3 py-2 sm:px-4 sm:py-3">
                         <p class="text-slate-200 text-xs sm:text-sm break-words">${text}</p>
                     </div>
-                    <span class="text-xs text-slate-500 mt-1 block">Larry • Just now</span>
+                    <span class="text-xs text-slate-500 mt-1 block">Leo • Just now</span>
                 </div>
             `;
         }
@@ -167,7 +165,7 @@
 
     // Get random response
     function getRandomResponse() {
-        return larryResponses[Math.floor(Math.random() * larryResponses.length)];
+        return LeoResponses[Math.floor(Math.random() * LeoResponses.length)];
     }
 
     // Handle form submission
