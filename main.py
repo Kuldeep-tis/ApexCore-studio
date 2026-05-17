@@ -19,6 +19,10 @@ from flask_limiter.util import get_remote_address
 from flask_limiter.errors import RateLimitExceeded
 
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
 app = Flask(__name__)
 CORS(app, origins=["https://app.apexcorepay.com"])
 
@@ -100,29 +104,6 @@ def init_db():
 init_db()
 
 
-# captcha
-def verify_captcha(token):
-
-    secret=os.getenv(
-        "RECAPTCHA_SECRET"
-    )
-
-    response=requests.post(
-        "https://www.google.com/recaptcha/api/siteverify",
-        data={
-            "secret":secret,
-            "response":token
-        }
-    )
-
-    result=response.json()
-
-    return result.get(
-        "success",
-        False
-    )
-
-
 
 # --- SEO Routes (NEW) ---
 @app.route('/robots.txt')
@@ -196,10 +177,46 @@ def services():
 def contact():
     return render_template('base/contact.html')
 
+
+def verify_captcha(token):
+
+    secret=os.getenv(
+        "RECAPTCHA_SECRET"
+    )
+
+    print(
+        "SECRET START:",
+        secret[:10] if secret else "NONE"
+    )
+
+    print(
+        "TOKEN START:",
+        token[:20] if token else "NONE"
+    )
+
+    response=requests.post(
+        "https://www.google.com/recaptcha/api/siteverify",
+        data={
+            "secret":secret.strip(),
+            "response":token.strip()
+        },
+        timeout=10
+    )
+
+    result=response.json()
+
+    print("FULL RESPONSE:",result)
+
+    return result.get(
+        "success",
+        False
+    )
+
 @app.route('/submit', methods=['POST'])
 @limiter.limit("3 per minute")
 def submit():
     try:
+        print("Requesting submitting form ")
         captcha_token=request.form.get(
         'g-recaptcha-response'
         )
@@ -211,6 +228,8 @@ def submit():
                 "success":False,
                 "message":"Captcha verification failed"
             }),403
+
+        print("Captcha verified successfully")
 
         first_name = request.form.get('firstName', '')
         last_name = request.form.get('lastName', '')
