@@ -3,6 +3,7 @@
 {% block title %}Partner Program | ApexCore Pay{% endblock %}
 
 {% block content %}
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <section class="relative min-h-[85vh] flex items-center pt-20 overflow-hidden">
     <div class="absolute inset-0 z-0">
         <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-indigo-900/20 rounded-full blur-[120px]"></div>
@@ -10,33 +11,42 @@
         <svg class="absolute inset-0 w-full h-full opacity-10" xmlns="http://www.w3.org/2000/svg">
             <defs>
                 <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-                    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" stroke-width="0.5"/>
+                    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" stroke-width="0.5" />
                 </pattern>
             </defs>
-            <rect width="100%" height="100%" fill="url(#grid)" class="text-white"/>
+            <rect width="100%" height="100%" fill="url(#grid)" class="text-white" />
         </svg>
     </div>
 
     <div class="max-w-7xl mx-auto px-6 relative z-10 w-full text-center">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-indigo-500/30 bg-indigo-500/10 backdrop-blur-sm mb-6 animate-fade-in">
+        <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-indigo-500/30 bg-indigo-500/10 backdrop-blur-sm mb-6 animate-fade-in">
             <span class="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></span>
             <span class="text-indigo-300 text-xs font-bold uppercase tracking-widest">ISO & Agent Program</span>
         </div>
-        
-        <h1 class="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-white mb-8 animate-fade-in leading-tight">
-            Earn <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">Lifetime</span> <br>
+
+        <h1
+            class="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-white mb-8 animate-fade-in leading-tight">
+            Earn <span
+                class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">Lifetime</span> <br>
             Residuals.
         </h1>
-        
+
         <p class="text-xl text-slate-400 max-w-2xl mx-auto mb-10 animate-fade-in">
-            Partner with the high-risk processor that actually approves your deals. 
-            Get paid up to <span class="text-white font-bold">70% revenue share</span> on every transaction your merchants process. Forever.
+            Partner with the high-risk processor that actually approves your deals.
+            Get paid up to <span class="text-white font-bold">70% revenue share</span> on every transaction your
+            merchants process. Forever.
         </p>
 
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in">
-            <a href="#register" class="px-10 py-4 rounded-full bg-white text-slate-900 font-bold hover:bg-slate-200 transition-all shadow-[0_0_30px_rgba(255,255,255,0.2)]">Become a Partner</a>
-            <button onclick="document.getElementById('calculator').scrollIntoView({behavior: 'smooth'})" class="px-10 py-4 rounded-full border border-slate-700 text-white hover:bg-slate-800 transition-all flex items-center gap-2">
-                Calculate Earnings <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            <a href="#register"
+                class="px-10 py-4 rounded-full bg-white text-slate-900 font-bold hover:bg-slate-200 transition-all shadow-[0_0_30px_rgba(255,255,255,0.2)]">Become
+                a Partner</a>
+            <button onclick="document.getElementById('calculator').scrollIntoView({behavior: 'smooth'})"
+                class="px-10 py-4 rounded-full border border-slate-700 text-white hover:bg-slate-800 transition-all flex items-center gap-2">
+                Calculate Earnings <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
             </button>
         </div>
     </div>
@@ -52,41 +62,68 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[300px]">
-            <div class="md:col-span-2 bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-8 border border-slate-700 relative overflow-hidden group">
+            <div
+                class="md:col-span-2 bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-8 border border-slate-700 relative overflow-hidden group">
                 <div class="relative z-10">
-                    <div class="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center text-green-500 mb-6">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <div
+                        class="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center text-green-500 mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                            </path>
+                        </svg>
                     </div>
                     <h3 class="text-3xl font-bold text-white mb-4">50% - 70% Net Revenue Share</h3>
-                    <p class="text-slate-400 max-w-md">The most aggressive splits in the industry. We pay on everything: discount rate, transaction fees, and cross-border fees. No hidden "buy rates" eating your margin.</p>
+                    <p class="text-slate-400 max-w-md">The most aggressive splits in the industry. We pay on everything:
+                        discount rate, transaction fees, and cross-border fees. No hidden "buy rates" eating your
+                        margin.</p>
                 </div>
-                <div class="absolute right-0 bottom-0 w-64 h-64 bg-green-500/10 rounded-full blur-[80px] group-hover:bg-green-500/20 transition-colors"></div>
+                <div
+                    class="absolute right-0 bottom-0 w-64 h-64 bg-green-500/10 rounded-full blur-[80px] group-hover:bg-green-500/20 transition-colors">
+                </div>
             </div>
 
-            <div class="md:row-span-2 bg-slate-900 rounded-3xl p-8 border border-slate-700 flex flex-col relative overflow-hidden group">
+            <div
+                class="md:row-span-2 bg-slate-900 rounded-3xl p-8 border border-slate-700 flex flex-col relative overflow-hidden group">
                 <div class="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center text-primary mb-6">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                    </svg>
                 </div>
                 <h3 class="text-2xl font-bold text-white mb-4">99% Approval Rate</h3>
-                <p class="text-slate-400 mb-8 leading-relaxed">Don't burn leads. We have 15+ banking partners. If Bank A says no, Bank B says yes. We monetize deals others trash.</p>
-                
+                <p class="text-slate-400 mb-8 leading-relaxed">Don't burn leads. We have 15+ banking partners. If Bank A
+                    says no, Bank B says yes. We monetize deals others trash.</p>
+
                 <div class="absolute bottom-0 right-0 w-full h-32 bg-gradient-to-t from-primary/5 to-transparent"></div>
             </div>
 
-            <div class="bg-slate-900 rounded-3xl p-8 border border-slate-700 group hover:border-primary/50 transition-colors">
-                <div class="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center text-purple-500 mb-6">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            <div
+                class="bg-slate-900 rounded-3xl p-8 border border-slate-700 group hover:border-primary/50 transition-colors">
+                <div
+                    class="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center text-purple-500 mb-6">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
                 </div>
                 <h3 class="text-xl font-bold text-white mb-2">Weekly Payouts</h3>
                 <p class="text-slate-400 text-sm">Consistent cash flow. Residuals paid every Friday like clockwork.</p>
             </div>
 
-            <div class="bg-slate-900 rounded-3xl p-8 border border-slate-700 group hover:border-primary/50 transition-colors">
-                <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center text-orange-500 mb-6">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path></svg>
+            <div
+                class="bg-slate-900 rounded-3xl p-8 border border-slate-700 group hover:border-primary/50 transition-colors">
+                <div
+                    class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center text-orange-500 mb-6">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636">
+                        </path>
+                    </svg>
                 </div>
                 <h3 class="text-xl font-bold text-white mb-2">No Exclusivity</h3>
-                <p class="text-slate-400 text-sm">Keep your existing relationships. Use us purely for your high-risk declines.</p>
+                <p class="text-slate-400 text-sm">Keep your existing relationships. Use us purely for your high-risk
+                    declines.</p>
             </div>
         </div>
     </div>
@@ -95,13 +132,14 @@
 <section id="calculator" class="py-24 relative overflow-hidden bg-slate-950">
     <div class="absolute inset-0 bg-primary/5"></div>
     <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center relative z-10">
-        
+
         <div>
             <h2 class="text-4xl font-display font-bold text-white mb-6">Calculate Your Potential</h2>
             <p class="text-slate-400 text-lg mb-8">
-                High-risk merchants process higher volumes and pay higher rates. Move the sliders to see your potential monthly residuals based on a 60% revenue share.
+                High-risk merchants process higher volumes and pay higher rates. Move the sliders to see your potential
+                monthly residuals based on a 60% revenue share.
             </p>
-            
+
             <div class="space-y-10">
                 <div>
                     <div class="flex justify-between text-sm text-white mb-4 font-bold">
@@ -109,12 +147,15 @@
                         <span id="volumeDisplay">$500,000</span>
                     </div>
                     <div class="relative w-full h-2">
-                        <input type="range" min="100000" max="2000000" step="50000" value="500000" id="volumeInput" 
-                               class="w-full absolute z-20 opacity-0 cursor-pointer h-full">
+                        <input type="range" min="100000" max="2000000" step="50000" value="500000" id="volumeInput"
+                            class="w-full absolute z-20 opacity-0 cursor-pointer h-full">
                         <div class="absolute top-0 left-0 h-2 bg-slate-700 rounded-full w-full overflow-hidden">
-                            <div id="volumeBar" class="h-full bg-primary rounded-full transition-all duration-75 ease-out" style="width: 21%;"></div>
+                            <div id="volumeBar"
+                                class="h-full bg-primary rounded-full transition-all duration-75 ease-out"
+                                style="width: 21%;"></div>
                         </div>
-                        <div id="volumeThumb" class="absolute top-1/2 -translate-y-1/2 w-6 h-6 bg-white rounded-full shadow-lg pointer-events-none transition-all duration-75 ease-out flex items-center justify-center left-[21%]">
+                        <div id="volumeThumb"
+                            class="absolute top-1/2 -translate-y-1/2 w-6 h-6 bg-white rounded-full shadow-lg pointer-events-none transition-all duration-75 ease-out flex items-center justify-center left-[21%]">
                             <div class="w-2 h-2 bg-primary rounded-full"></div>
                         </div>
                     </div>
@@ -126,18 +167,22 @@
                         <span id="marginDisplay">150 bps</span>
                     </div>
                     <div class="relative w-full h-2">
-                        <input type="range" min="50" max="400" step="10" value="150" id="marginInput" 
-                               class="w-full absolute z-20 opacity-0 cursor-pointer h-full">
+                        <input type="range" min="50" max="400" step="10" value="150" id="marginInput"
+                            class="w-full absolute z-20 opacity-0 cursor-pointer h-full">
                         <div class="absolute top-0 left-0 h-2 bg-slate-700 rounded-full w-full overflow-hidden">
-                            <div id="marginBar" class="h-full bg-primary rounded-full transition-all duration-75 ease-out" style="width: 28.5%;"></div>
+                            <div id="marginBar"
+                                class="h-full bg-primary rounded-full transition-all duration-75 ease-out"
+                                style="width: 28.5%;"></div>
                         </div>
-                        <div id="marginThumb" class="absolute top-1/2 -translate-y-1/2 w-6 h-6 bg-white rounded-full shadow-lg pointer-events-none transition-all duration-75 ease-out flex items-center justify-center left-[28.5%]">
+                        <div id="marginThumb"
+                            class="absolute top-1/2 -translate-y-1/2 w-6 h-6 bg-white rounded-full shadow-lg pointer-events-none transition-all duration-75 ease-out flex items-center justify-center left-[28.5%]">
                             <div class="w-2 h-2 bg-primary rounded-full"></div>
                         </div>
                     </div>
                 </div>
 
-                <div class="bg-slate-900 border border-slate-700 p-8 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+                <div
+                    class="bg-slate-900 border border-slate-700 p-8 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-6">
                     <div>
                         <div class="text-slate-400 text-sm mb-1">Your Monthly Residual</div>
                         <div class="text-4xl font-bold text-white flex items-baseline">
@@ -154,19 +199,31 @@
 
         <div class="relative h-[400px] w-full bg-slate-900 border border-slate-700 rounded-2xl p-6 flex flex-col">
             <h3 class="text-slate-400 text-sm uppercase tracking-widest mb-6">Portfolio Growth Projection</h3>
-            
+
             <div class="flex-1 flex items-end justify-between gap-4 px-4 pb-4 border-b border-slate-700">
-                <div class="w-full bg-slate-800 rounded-t-lg h-[20%] group relative transition-all duration-500 hover:bg-slate-700">
-                    <div class="absolute -top-8 left-1/2 -translate-x-1/2 text-xs text-white opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">$<span id="graph1">2k</span></div>
+                <div
+                    class="w-full bg-slate-800 rounded-t-lg h-[20%] group relative transition-all duration-500 hover:bg-slate-700">
+                    <div
+                        class="absolute -top-8 left-1/2 -translate-x-1/2 text-xs text-white opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                        $<span id="graph1">2k</span></div>
                 </div>
-                <div class="w-full bg-slate-800 rounded-t-lg h-[35%] group relative transition-all duration-500 hover:bg-slate-700">
-                     <div class="absolute -top-8 left-1/2 -translate-x-1/2 text-xs text-white opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">$<span id="graph2">4.5k</span></div>
+                <div
+                    class="w-full bg-slate-800 rounded-t-lg h-[35%] group relative transition-all duration-500 hover:bg-slate-700">
+                    <div
+                        class="absolute -top-8 left-1/2 -translate-x-1/2 text-xs text-white opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                        $<span id="graph2">4.5k</span></div>
                 </div>
-                <div class="w-full bg-slate-800 rounded-t-lg h-[50%] group relative transition-all duration-500 hover:bg-slate-700">
-                     <div class="absolute -top-8 left-1/2 -translate-x-1/2 text-xs text-white opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">$<span id="graph3">8k</span></div>
+                <div
+                    class="w-full bg-slate-800 rounded-t-lg h-[50%] group relative transition-all duration-500 hover:bg-slate-700">
+                    <div
+                        class="absolute -top-8 left-1/2 -translate-x-1/2 text-xs text-white opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                        $<span id="graph3">8k</span></div>
                 </div>
-                <div class="w-full bg-gradient-to-t from-primary/50 to-primary rounded-t-lg h-[75%] group relative shadow-[0_0_20px_rgba(14,165,233,0.3)] transition-all duration-500">
-                     <div class="absolute -top-8 left-1/2 -translate-x-1/2 text-xs font-bold text-primary opacity-100 whitespace-nowrap">$<span id="graphMain">12k</span></div>
+                <div
+                    class="w-full bg-gradient-to-t from-primary/50 to-primary rounded-t-lg h-[75%] group relative shadow-[0_0_20px_rgba(14,165,233,0.3)] transition-all duration-500">
+                    <div
+                        class="absolute -top-8 left-1/2 -translate-x-1/2 text-xs font-bold text-primary opacity-100 whitespace-nowrap">
+                        $<span id="graphMain">12k</span></div>
                 </div>
                 <div class="w-full bg-slate-800 rounded-t-lg h-[90%] group relative opacity-50"></div>
             </div>
@@ -186,7 +243,8 @@
 <section class="py-24 bg-surface">
     <div class="max-w-7xl mx-auto px-6 text-center mb-16">
         <h2 class="text-3xl font-display font-bold text-white mb-4">Total Transparency</h2>
-        <p class="text-slate-400 max-w-2xl mx-auto">Track every click, application status, and commission penny in real-time with our custom Partner Portal.</p>
+        <p class="text-slate-400 max-w-2xl mx-auto">Track every click, application status, and commission penny in
+            real-time with our custom Partner Portal.</p>
     </div>
 
     <div class="max-w-6xl mx-auto px-6">
@@ -210,10 +268,15 @@
 
             <div class="p-8 grid grid-cols-12 gap-6">
                 <div class="col-span-2 hidden md:block space-y-4">
-                    <div class="h-10 bg-primary/10 rounded-lg text-primary flex items-center px-4 text-sm font-bold border-l-2 border-primary">Dashboard</div>
-                    <div class="h-10 text-slate-400 flex items-center px-4 text-sm hover:text-white cursor-pointer">Merchants</div>
-                    <div class="h-10 text-slate-400 flex items-center px-4 text-sm hover:text-white cursor-pointer">Commissions</div>
-                    <div class="h-10 text-slate-400 flex items-center px-4 text-sm hover:text-white cursor-pointer">Marketing Tools</div>
+                    <div
+                        class="h-10 bg-primary/10 rounded-lg text-primary flex items-center px-4 text-sm font-bold border-l-2 border-primary">
+                        Dashboard</div>
+                    <div class="h-10 text-slate-400 flex items-center px-4 text-sm hover:text-white cursor-pointer">
+                        Merchants</div>
+                    <div class="h-10 text-slate-400 flex items-center px-4 text-sm hover:text-white cursor-pointer">
+                        Commissions</div>
+                    <div class="h-10 text-slate-400 flex items-center px-4 text-sm hover:text-white cursor-pointer">
+                        Marketing Tools</div>
                 </div>
 
                 <div class="col-span-12 md:col-span-10 grid grid-cols-3 gap-6">
@@ -227,16 +290,21 @@
                         <div class="text-2xl font-bold text-white">42</div>
                         <div class="text-green-500 text-xs mt-1">+3 New this week</div>
                     </div>
-                     <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 relative overflow-hidden">
+                    <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 relative overflow-hidden">
                         <div class="text-slate-400 text-xs uppercase tracking-wide mb-2">Unpaid Residuals</div>
                         <div class="text-2xl font-bold text-primary">$8,350.25</div>
                         <div class="text-slate-400 text-xs mt-1">Next payout: Friday</div>
                         <div class="absolute right-0 bottom-0 opacity-10 text-primary">
-                            <svg class="w-16 h-16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1.41 16.09V20h-2.67v-1.93c-1.71-.36-3.16-1.46-3.27-3.4h1.96c.1 1.05 1.18 1.91 2.53 1.91 1.29 0 2.13-.72 2.13-1.71 0-1.1-1.05-1.58-2.6-1.93-2.02-.46-3.96-1.14-3.96-3.68 0-2.01 1.55-3.34 3.21-3.71V3h2.67v1.93c1.5.25 2.91 1.26 3.11 3.26h-1.95c-.13-1.07-1.14-1.84-2.5-1.84-1.28 0-2.04.81-2.04 1.66 0 .96.9 1.45 2.56 1.83 2.15.48 4 1.25 4 3.75 0 1.98-1.5 3.36-3.16 3.74z"></path></svg>
+                            <svg class="w-16 h-16" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1.41 16.09V20h-2.67v-1.93c-1.71-.36-3.16-1.46-3.27-3.4h1.96c.1 1.05 1.18 1.91 2.53 1.91 1.29 0 2.13-.72 2.13-1.71 0-1.1-1.05-1.58-2.6-1.93-2.02-.46-3.96-1.14-3.96-3.68 0-2.01 1.55-3.34 3.21-3.71V3h2.67v1.93c1.5.25 2.91 1.26 3.11 3.26h-1.95c-.13-1.07-1.14-1.84-2.5-1.84-1.28 0-2.04.81-2.04 1.66 0 .96.9 1.45 2.56 1.83 2.15.48 4 1.25 4 3.75 0 1.98-1.5 3.36-3.16 3.74z">
+                                </path>
+                            </svg>
                         </div>
                     </div>
-                    
-                    <div class="col-span-3 bg-slate-800/50 h-48 rounded-xl border border-slate-700/50 flex items-center justify-center text-slate-500 text-sm">
+
+                    <div
+                        class="col-span-3 bg-slate-800/50 h-48 rounded-xl border border-slate-700/50 flex items-center justify-center text-slate-500 text-sm">
                         [Interactive Revenue Graph Placeholder]
                     </div>
                 </div>
@@ -251,19 +319,23 @@
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div class="p-6 border-l-2 border-primary bg-slate-900/30">
                 <h4 class="text-white font-bold mb-2">ISOs & MSPs</h4>
-                <p class="text-sm text-slate-400">Expand your portfolio with our high-risk BINs. White-label options available.</p>
+                <p class="text-sm text-slate-400">Expand your portfolio with our high-risk BINs. White-label options
+                    available.</p>
             </div>
             <div class="p-6 border-l-2 border-primary bg-slate-900/30">
                 <h4 class="text-white font-bold mb-2">Web Developers</h4>
-                <p class="text-sm text-slate-400">Integrate our gateway for your clients and earn on every transaction they make.</p>
+                <p class="text-sm text-slate-400">Integrate our gateway for your clients and earn on every transaction
+                    they make.</p>
             </div>
             <div class="p-6 border-l-2 border-primary bg-slate-900/30">
                 <h4 class="text-white font-bold mb-2">SaaS Platforms</h4>
-                <p class="text-sm text-slate-400">Monetize your payments layer. Seamless API integration for your users.</p>
+                <p class="text-sm text-slate-400">Monetize your payments layer. Seamless API integration for your users.
+                </p>
             </div>
             <div class="p-6 border-l-2 border-primary bg-slate-900/30">
                 <h4 class="text-white font-bold mb-2">Affiliate Marketers</h4>
-                <p class="text-sm text-slate-400">Refer merchants via your unique link. Simple setup, automated tracking.</p>
+                <p class="text-sm text-slate-400">Refer merchants via your unique link. Simple setup, automated
+                    tracking.</p>
             </div>
         </div>
     </div>
@@ -272,35 +344,44 @@
 <section class="py-24 bg-surface border-t border-slate-800">
     <div class="max-w-3xl mx-auto px-6">
         <h2 class="text-3xl font-display font-bold text-white mb-12 text-center">Partner FAQ</h2>
-        
+
         <div class="space-y-4">
             <div class="border border-slate-700 rounded-lg bg-slate-900 overflow-hidden">
-                <button class="w-full px-6 py-4 text-left flex justify-between items-center text-white font-medium hover:bg-slate-800" onclick="this.nextElementSibling.classList.toggle('hidden');">
+                <button
+                    class="w-full px-6 py-4 text-left flex justify-between items-center text-white font-medium hover:bg-slate-800"
+                    onclick="this.nextElementSibling.classList.toggle('hidden');">
                     <span>Do you offer a buy rate or revenue share?</span>
                     <span class="text-primary">+</span>
                 </button>
                 <div class="hidden px-6 py-4 text-slate-400 text-sm border-t border-slate-800">
-                    We offer both models. Experienced ISOs often prefer a low buy rate to mark up themselves, while affiliates prefer a flat 50-70% net revenue share. We customize the deal to your needs.
+                    We offer both models. Experienced ISOs often prefer a low buy rate to mark up themselves, while
+                    affiliates prefer a flat 50-70% net revenue share. We customize the deal to your needs.
                 </div>
             </div>
 
             <div class="border border-slate-700 rounded-lg bg-slate-900 overflow-hidden">
-                <button class="w-full px-6 py-4 text-left flex justify-between items-center text-white font-medium hover:bg-slate-800" onclick="this.nextElementSibling.classList.toggle('hidden');">
+                <button
+                    class="w-full px-6 py-4 text-left flex justify-between items-center text-white font-medium hover:bg-slate-800"
+                    onclick="this.nextElementSibling.classList.toggle('hidden');">
                     <span>When are commissions paid?</span>
                     <span class="text-primary">+</span>
                 </button>
                 <div class="hidden px-6 py-4 text-slate-400 text-sm border-t border-slate-800">
-                    Residuals are calculated monthly and paid on the 20th of the following month. For high-volume partners, we can arrange weekly payouts.
+                    Residuals are calculated monthly and paid on the 20th of the following month. For high-volume
+                    partners, we can arrange weekly payouts.
                 </div>
             </div>
 
             <div class="border border-slate-700 rounded-lg bg-slate-900 overflow-hidden">
-                <button class="w-full px-6 py-4 text-left flex justify-between items-center text-white font-medium hover:bg-slate-800" onclick="this.nextElementSibling.classList.toggle('hidden');">
+                <button
+                    class="w-full px-6 py-4 text-left flex justify-between items-center text-white font-medium hover:bg-slate-800"
+                    onclick="this.nextElementSibling.classList.toggle('hidden');">
                     <span>Can I white-label your gateway?</span>
                     <span class="text-primary">+</span>
                 </button>
                 <div class="hidden px-6 py-4 text-slate-400 text-sm border-t border-slate-800">
-                    Yes. Qualified partners can brand the entire merchant dashboard with their own logo, colors, and domain name (e.g., payments.youragency.com).
+                    Yes. Qualified partners can brand the entire merchant dashboard with their own logo, colors, and
+                    domain name (e.g., payments.youragency.com).
                 </div>
             </div>
         </div>
@@ -312,7 +393,7 @@
     <div class="max-w-4xl mx-auto px-6">
         <div class="glass-card p-8 md:p-12 rounded-3xl border border-slate-700 shadow-2xl relative overflow-hidden">
             <div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full -mr-32 -mt-32 blur-3xl"></div>
-            
+
             <div class="text-center mb-10">
                 <h2 class="text-3xl font-display font-bold text-white mb-4">Partner Registration</h2>
                 <p class="text-slate-400">Join the ApexCore network and start earning today.</p>
@@ -322,36 +403,42 @@
                 <div class="grid md:grid-cols-2 gap-6">
                     <div>
                         <label class="block text-sm font-medium text-slate-300 mb-2">Legal Name *</label>
-                        <input type="text" name="legalName" required class="w-full px-4 py-3 rounded-lg bg-slate-950 border border-slate-700 text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="Company LLC">
+                        <input type="text" name="legalName" required
+                            class="w-full px-4 py-3 rounded-lg bg-slate-950 border border-slate-700 text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
+                            placeholder="Company LLC">
                     </div>
                     <div>
                         <label class="block text-sm font-medium text-slate-300 mb-2">DBA (Doing Business As)</label>
-                        <input type="text" name="dba" class="w-full px-4 py-3 rounded-lg bg-slate-950 border border-slate-700 text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="Brand Name">
+                        <input type="text" name="dba"
+                            class="w-full px-4 py-3 rounded-lg bg-slate-950 border border-slate-700 text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
+                            placeholder="Brand Name">
                     </div>
                 </div>
 
                 <div class="grid md:grid-cols-2 gap-6">
-                    <input 
-                        type="tel" 
-                        name="cell" 
-                        required 
-                        minlength="10"
-                        pattern="^[0-9+()\s-]{10,15}$"
+                    <input type="tel" name="cell" required minlength="10" pattern="^[0-9+()\s-]{10,15}$"
                         title="Enter a valid phone number (10–15 digits, numbers only)"
                         class="w-full px-4 py-3 rounded-lg bg-slate-950 border border-slate-700 text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
                         placeholder="+1 (555) 000-0000">
                     <div>
                         <label class="block text-sm font-medium text-slate-300 mb-2">Email Address *</label>
-                        <input type="email" name="email" required class="w-full px-4 py-3 rounded-lg bg-slate-950 border border-slate-700 text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="partner@example.com">
+                        <input type="email" name="email" required
+                            class="w-full px-4 py-3 rounded-lg bg-slate-950 border border-slate-700 text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
+                            placeholder="partner@example.com">
                     </div>
                 </div>
 
                 <div>
                     <label class="block text-sm font-medium text-slate-300 mb-2">Description</label>
-                    <textarea name="description" rows="4" class="w-full px-4 py-3 rounded-lg bg-slate-950 border border-slate-700 text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-none" placeholder="Tell us about your portfolio or how you plan to refer clients..."></textarea>
+                    <textarea name="description" rows="4"
+                        class="w-full px-4 py-3 rounded-lg bg-slate-950 border border-slate-700 text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-none"
+                        placeholder="Tell us about your portfolio or how you plan to refer clients..."></textarea>
+                </div>
+                <div class="g-recaptcha" data-sitekey="6LeoY-4sAAAAAJ_a4sn8O2R71ifxkDpDnKgh812r">
                 </div>
 
-                <button type="submit" class="w-full py-4 bg-primary hover:bg-primary-dark text-white font-bold rounded-xl shadow-lg shadow-primary/20 transition-all transform hover:-translate-y-0.5">
+                <button type="submit"
+                    class="w-full py-4 bg-primary hover:bg-primary-dark text-white font-bold rounded-xl shadow-lg shadow-primary/20 transition-all transform hover:-translate-y-0.5">
                     Submit Application
                 </button>
             </form>
@@ -359,8 +446,10 @@
     </div>
 </section>
 
-<div id="status-popup" class="fixed bottom-10 right-10 z-[100] transform translate-y-10 opacity-0 transition-all duration-500 ease-out pointer-events-none">
-    <div id="popup-container" class="flex items-center gap-4 px-6 py-4 rounded-2xl border shadow-2xl backdrop-blur-md bg-slate-900/90 min-w-[320px]">
+<div id="status-popup"
+    class="fixed bottom-10 right-10 z-[100] transform translate-y-10 opacity-0 transition-all duration-500 ease-out pointer-events-none">
+    <div id="popup-container"
+        class="flex items-center gap-4 px-6 py-4 rounded-2xl border shadow-2xl backdrop-blur-md bg-slate-900/90 min-w-[320px]">
         <div id="popup-icon-box" class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0">
             <div id="popup-icon"></div>
         </div>
@@ -369,174 +458,176 @@
             <p id="popup-message" class="text-slate-400 text-xs leading-relaxed"></p>
         </div>
         <button onclick="hidePop()" class="text-slate-500 hover:text-white transition-colors">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
         </button>
     </div>
 </div>
 
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
         const volumeInput = document.getElementById('volumeInput');
         const marginInput = document.getElementById('marginInput');
-        
+
         // Output Elements
         const volumeDisplay = document.getElementById('volumeDisplay');
         const marginDisplay = document.getElementById('marginDisplay');
         const monthlyResult = document.getElementById('monthlyResult');
         const annualResult = document.getElementById('annualResult');
-        
+
         // Graph Elements
         const graphMain = document.getElementById('graphMain');
         const graph1 = document.getElementById('graph1');
         const graph2 = document.getElementById('graph2');
         const graph3 = document.getElementById('graph3');
-    
+
         // Visual Elements (Bars & Thumbs)
         const volumeBar = document.getElementById('volumeBar');
         const volumeThumb = document.getElementById('volumeThumb');
         const marginBar = document.getElementById('marginBar');
         const marginThumb = document.getElementById('marginThumb');
-    
+
         function formatCurrency(num) {
             return new Intl.NumberFormat('en-US').format(Math.round(num));
         }
-    
+
         function formatCompact(num) {
             return new Intl.NumberFormat('en-US', { notation: "compact", compactDisplay: "short" }).format(num);
         }
-    
+
         function updateCalculator() {
             // Get Values
             const volume = parseInt(volumeInput.value);
             const marginBps = parseInt(marginInput.value);
-            
+
             // Math Logic
             // Formula: Volume * (BPS / 10000) * Split Share
             // Assuming 60% Split based on your example ($500k * 150bps = $7500 Rev. Agent gets $4500 (60%))
             const totalRevenue = volume * (marginBps / 10000);
-            const agentMonthly = totalRevenue * 0.60; 
+            const agentMonthly = totalRevenue * 0.60;
             const agentAnnual = agentMonthly * 12;
-    
+
             // Update Text
             volumeDisplay.textContent = '$' + formatCurrency(volume);
             marginDisplay.textContent = marginBps + ' bps';
             monthlyResult.textContent = formatCurrency(agentMonthly);
             annualResult.textContent = formatCurrency(agentAnnual);
-    
+
             // Update Graph Labels (Dynamic Projections)
             // We project growth: Month 1 (20%), Month 3 (50%), Month 6 (80%), Year 1 (Current Calc)
             graphMain.textContent = formatCompact(agentAnnual); // Year 1 Annualized
-            graph3.textContent = formatCompact(agentAnnual * 0.6); 
+            graph3.textContent = formatCompact(agentAnnual * 0.6);
             graph2.textContent = formatCompact(agentAnnual * 0.35);
             graph1.textContent = formatCompact(agentAnnual * 0.15);
-    
+
             // Update Visual Sliders (Progress Bar & Thumb Position)
             updateVisuals(volumeInput, volumeBar, volumeThumb);
             updateVisuals(marginInput, marginBar, marginThumb);
         }
-    
+
         function updateVisuals(input, bar, thumb) {
             const min = parseInt(input.min);
             const max = parseInt(input.max);
             const val = parseInt(input.value);
-            
+
             // Calculate percentage
             const percentage = ((val - min) / (max - min)) * 100;
-            
+
             // Update width of the colored bar
             bar.style.width = percentage + '%';
-            
+
             // Update left position of the thumb
             // We adjust slightly to center the thumb on the value
-            thumb.style.left = `calc(${percentage}% - 12px)`; 
+            thumb.style.left = `calc(${percentage}% - 12px)`;
         }
-    
+
         // Event Listeners
         volumeInput.addEventListener('input', updateCalculator);
         marginInput.addEventListener('input', updateCalculator);
-    
+
         // Initial Run
         updateCalculator();
     });
-    </script>
+</script>
 
 <script>
 
 
-function show_pop(type, msg) {
-    const popup = document.getElementById('status-popup');
-    const container = document.getElementById('popup-container');
-    const iconBox = document.getElementById('popup-icon-box');
-    const icon = document.getElementById('popup-icon');
-    const title = document.getElementById('popup-title');
-    const message = document.getElementById('popup-message');
+    function show_pop(type, msg) {
+        const popup = document.getElementById('status-popup');
+        const container = document.getElementById('popup-container');
+        const iconBox = document.getElementById('popup-icon-box');
+        const icon = document.getElementById('popup-icon');
+        const title = document.getElementById('popup-title');
+        const message = document.getElementById('popup-message');
 
-    // Configuration based on type
-    if (type === 'success') {
-        container.style.borderColor = 'rgba(34, 197, 94, 0.3)';
-        iconBox.className = 'w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 bg-green-500/20 text-green-500';
-        icon.innerHTML = '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>';
-        title.innerText = 'Success';
-    } else {
-        container.style.borderColor = 'rgba(239, 68, 68, 0.3)';
-        iconBox.className = 'w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 bg-red-500/20 text-red-500';
-        icon.innerHTML = '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>';
-        title.innerText = 'Error';
+        // Configuration based on type
+        if (type === 'success') {
+            container.style.borderColor = 'rgba(34, 197, 94, 0.3)';
+            iconBox.className = 'w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 bg-green-500/20 text-green-500';
+            icon.innerHTML = '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>';
+            title.innerText = 'Success';
+        } else {
+            container.style.borderColor = 'rgba(239, 68, 68, 0.3)';
+            iconBox.className = 'w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 bg-red-500/20 text-red-500';
+            icon.innerHTML = '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>';
+            title.innerText = 'Error';
+        }
+
+        message.innerText = msg;
+
+        // Show Animation
+        popup.classList.remove('opacity-0', 'translate-y-10', 'pointer-events-none');
+
+        // Auto Hide after 4 seconds
+        setTimeout(hidePop, 4000);
     }
 
-    message.innerText = msg;
-
-    // Show Animation
-    popup.classList.remove('opacity-0', 'translate-y-10', 'pointer-events-none');
-    
-    // Auto Hide after 4 seconds
-    setTimeout(hidePop, 4000);
-}
-
-function hidePop() {
-    const popup = document.getElementById('status-popup');
-    popup.classList.add('opacity-0', 'translate-y-10', 'pointer-events-none');
-}
+    function hidePop() {
+        const popup = document.getElementById('status-popup');
+        popup.classList.add('opacity-0', 'translate-y-10', 'pointer-events-none');
+    }
 
 
 
-document.getElementById('partner-form').addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const formData = new FormData(e.target);
-    const submitBtn = e.target.querySelector('button[type="submit"]');
-    const originalBtnText = submitBtn.innerText;
-    
-    submitBtn.disabled = true;
-    submitBtn.innerHTML = `
+    document.getElementById('partner-form').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const formData = new FormData(e.target);
+        const submitBtn = e.target.querySelector('button[type="submit"]');
+        const originalBtnText = submitBtn.innerText;
+
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = `
         <div class="flex items-center justify-center gap-2">
             <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
             Processing...
         </div>`;
 
-    try {
-        const response = await fetch('/submit-partner', {
-            method: 'POST',
-            body: formData
-        });
-        const result = await response.json();
+        try {
+            const response = await fetch('/submit-partner', {
+                method: 'POST',
+                body: formData
+            });
+            const result = await response.json();
 
-        if (result.success) {
-            show_pop('success', 'Application Received! Our team will contact you shortly.');
-            e.target.reset();
-        } else {
-            show_pop('error', result.message || 'Something went wrong.');
+            if (result.success) {
+                show_pop('success', 'Application Received! Our team will contact you shortly.');
+                e.target.reset();
+            } else {
+                show_pop('error', result.message || 'Something went wrong.');
+            }
+        } catch (error) {
+            show_pop('error', 'Network error. Please try again later.');
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.innerText = originalBtnText;
         }
-    } catch (error) {
-        show_pop('error', 'Network error. Please try again later.');
-    } finally {
-        submitBtn.disabled = false;
-        submitBtn.innerText = originalBtnText;
-    }
-});
-   
-   
-   </script>
+    });
+
+
+</script>
 
 
 {% endblock %}

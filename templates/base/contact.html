@@ -3,6 +3,7 @@
 {% block title %}Contact Us | ApexCore Payments{% endblock %}
 
 {% block content %}
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <section class="relative min-h-screen flex items-center pt-20 pb-24 overflow-hidden">
     <div class="absolute inset-0 z-0">
         <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/10 rounded-full blur-[120px]"></div>
@@ -10,9 +11,10 @@
     </div>
 
     <div class="max-w-7xl mx-auto px-6 relative z-10 w-full">
-        
+
         <div class="text-center mb-16 max-w-3xl mx-auto">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-slate-700 bg-slate-800/50 backdrop-blur-sm mb-6">
+            <div
+                class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-slate-700 bg-slate-800/50 backdrop-blur-sm mb-6">
                 <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
                 <span class="text-xs font-medium text-slate-300 uppercase tracking-wide">24/7 Support</span>
             </div>
@@ -20,58 +22,73 @@
                 Let's Talk <span class="text-primary">Business</span>
             </h1>
             <p class="text-xl text-slate-400">
-                Ready to upgrade your payment infrastructure? Our team of high-risk experts is standing by to get you approved.
+                Ready to upgrade your payment infrastructure? Our team of high-risk experts is standing by to get you
+                approved.
             </p>
         </div>
 
         <div class="grid lg:grid-cols-12 gap-12 items-start">
-            
+
             <div class="lg:col-span-4 space-y-8">
                 <div class="glass-card p-8 rounded-2xl border border-slate-700/50">
                     <h3 class="text-xl font-bold text-white mb-6">Contact Information</h3>
-                    
+
                     <div class="space-y-6">
                         <div class="flex items-start gap-4">
-                            <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            <div
+                                class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                    </path>
+                                </svg>
                             </div>
                             <div>
                                 <p class="text-sm text-slate-500 mb-1">Email Support</p>
-                                <a href="mailto:support@apexcorepay.com" class="text-white font-medium hover:text-primary transition-colors">support@apexcorepay.com</a>
+                                <a href="mailto:support@apexcorepay.com"
+                                    class="text-white font-medium hover:text-primary transition-colors">support@apexcorepay.com</a>
                             </div>
                         </div>
 
                         <div class="flex items-start gap-4">
-                            <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            <div
+                                class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                                    </path>
+                                </svg>
                             </div>
                             <div>
                                 <p class="text-sm text-slate-500 mb-1">Sales Hotline</p>
-                                <a href="tel:+19177185547" class="text-white font-medium hover:text-primary transition-colors">+1 (917) 718-5547</a>
+                                <a href="tel:+19177185547"
+                                    class="text-white font-medium hover:text-primary transition-colors">+1 (917)
+                                    718-5547</a>
                             </div>
                         </div>
 
                         <div class="flex items-start gap-4">
-                            <div class="w-10 h-10 rounded-lg bg-green-500/10 flex items-center justify-center text-green-500 flex-shrink-0">
+                            <div
+                                class="w-10 h-10 rounded-lg bg-green-500/10 flex items-center justify-center text-green-500 flex-shrink-0">
                                 <!-- WhatsApp Icon -->
                                 <svg class="w-5 h-5" viewBox="0 0 32 32" fill="currentColor">
-                                    <path d="M16.003 3C9.374 3 4 8.373 4 15c0 2.655.844 5.118 2.285 7.137L4 29l7.086-2.24A11.94 11.94 0 0016.003 27C22.627 27 28 21.627 28 15S22.627 3 16.003 3zm0 21.75a9.65 9.65 0 01-4.915-1.342l-.35-.207-4.204 1.328 1.37-4.096-.228-.37A9.676 9.676 0 016.35 15c0-5.326 4.326-9.65 9.653-9.65 5.326 0 9.647 4.324 9.647 9.65 0 5.326-4.32 9.75-9.647 9.75zm5.298-7.14c-.29-.145-1.715-.846-1.98-.942-.264-.097-.456-.145-.648.145-.193.29-.744.942-.912 1.135-.168.193-.336.217-.626.072-.29-.145-1.225-.45-2.333-1.436-.862-.77-1.444-1.72-1.612-2.01-.168-.29-.018-.447.126-.592.13-.13.29-.336.434-.504.145-.168.193-.29.29-.483.097-.193.048-.362-.024-.507-.072-.145-.648-1.566-.888-2.15-.233-.56-.47-.484-.648-.493h-.553c-.193 0-.507.072-.773.362s-1.013.99-1.013 2.417 1.037 2.807 1.182 3 .145.29 1.182 1.806c1.037 1.516 2.03 2.125 2.772 2.416.742.29 1.49.446 2.004.287.306-.097.942-.386 1.078-.758.135-.372.135-.69.097-.758-.048-.072-.264-.12-.553-.264z"/>
+                                    <path
+                                        d="M16.003 3C9.374 3 4 8.373 4 15c0 2.655.844 5.118 2.285 7.137L4 29l7.086-2.24A11.94 11.94 0 0016.003 27C22.627 27 28 21.627 28 15S22.627 3 16.003 3zm0 21.75a9.65 9.65 0 01-4.915-1.342l-.35-.207-4.204 1.328 1.37-4.096-.228-.37A9.676 9.676 0 016.35 15c0-5.326 4.326-9.65 9.653-9.65 5.326 0 9.647 4.324 9.647 9.65 0 5.326-4.32 9.75-9.647 9.75zm5.298-7.14c-.29-.145-1.715-.846-1.98-.942-.264-.097-.456-.145-.648.145-.193.29-.744.942-.912 1.135-.168.193-.336.217-.626.072-.29-.145-1.225-.45-2.333-1.436-.862-.77-1.444-1.72-1.612-2.01-.168-.29-.018-.447.126-.592.13-.13.29-.336.434-.504.145-.168.193-.29.29-.483.097-.193.048-.362-.024-.507-.072-.145-.648-1.566-.888-2.15-.233-.56-.47-.484-.648-.493h-.553c-.193 0-.507.072-.773.362s-1.013.99-1.013 2.417 1.037 2.807 1.182 3 .145.29 1.182 1.806c1.037 1.516 2.03 2.125 2.772 2.416.742.29 1.49.446 2.004.287.306-.097.942-.386 1.078-.758.135-.372.135-.69.097-.758-.048-.072-.264-.12-.553-.264z" />
                                 </svg>
                             </div>
                             <div>
                                 <p class="text-sm text-slate-500 mb-1">WhatsApp Support</p>
                                 <a href="https://wa.me/13322926654?text=Hello%20ApexCore%20Payments%2C%20I%E2%80%99m%20contacting%20you%20from%20the%20Contact%20Us%20page%20and%20would%20like%20help%20with%20payment%20processing."
-                                target="_blank"
-                                rel="noopener"
-                                class="text-white font-medium hover:text-green-400 transition-colors">
+                                    target="_blank" rel="noopener"
+                                    class="text-white font-medium hover:text-green-400 transition-colors">
                                     Chat on WhatsApp
                                 </a>
 
                             </div>
                         </div>
-                        
 
-                        
+
+
                     </div>
                 </div>
 
@@ -81,69 +98,80 @@
                         Check our documentation or talk to our executives right away with live chat.
                     </p>
 
-                    <a href="#" onclick="Tawk_API.maximize(); return false;" 
-                    class="text-primary text-sm font-bold hover:underline">
+                    <a href="#" onclick="Tawk_API.maximize(); return false;"
+                        class="text-primary text-sm font-bold hover:underline">
                         Start Live Chat →
                     </a>
                 </div>
             </div>
 
-            
+
 
             <div class="lg:col-span-8">
-                <div class="glass-card p-8 md:p-10 rounded-2xl border border-slate-700 shadow-2xl relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-bl-full -mr-16 -mt-16 pointer-events-none"></div>
-                    
+                <div
+                    class="glass-card p-8 md:p-10 rounded-2xl border border-slate-700 shadow-2xl relative overflow-hidden">
+                    <div
+                        class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-bl-full -mr-16 -mt-16 pointer-events-none">
+                    </div>
+
                     <h3 class="text-2xl font-bold text-white mb-6">Send us a message</h3>
-                    
+
                     <form id="contact-form" action="/submit" method="POST" class="space-y-6">
                         <div class="grid md:grid-cols-2 gap-6">
                             <div>
-                                <label for="firstName" class="block text-sm font-medium text-slate-300 mb-2">First Name *</label>
-                                <input type="text" id="firstName" name="firstName" required 
-                                       class="w-full px-4 py-3 rounded-lg bg-slate-900/50 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
-                                       placeholder="John">
+                                <label for="firstName" class="block text-sm font-medium text-slate-300 mb-2">First Name
+                                    *</label>
+                                <input type="text" id="firstName" name="firstName" required
+                                    class="w-full px-4 py-3 rounded-lg bg-slate-900/50 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
+                                    placeholder="John">
                             </div>
                             <div>
-                                <label for="lastName" class="block text-sm font-medium text-slate-300 mb-2">Last Name *</label>
+                                <label for="lastName" class="block text-sm font-medium text-slate-300 mb-2">Last Name
+                                    *</label>
                                 <input type="text" id="lastName" name="lastName" required
-                                       class="w-full px-4 py-3 rounded-lg bg-slate-900/50 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
-                                       placeholder="Doe">
+                                    class="w-full px-4 py-3 rounded-lg bg-slate-900/50 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
+                                    placeholder="Doe">
                             </div>
                         </div>
-                        
+
                         <div class="grid md:grid-cols-2 gap-6">
                             <div>
-                                <label for="email" class="block text-sm font-medium text-slate-300 mb-2">Email Address *</label>
+                                <label for="email" class="block text-sm font-medium text-slate-300 mb-2">Email Address
+                                    *</label>
                                 <input type="email" id="email" name="email" required
-                                       class="w-full px-4 py-3 rounded-lg bg-slate-900/50 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
-                                       placeholder="john@company.com">
+                                    class="w-full px-4 py-3 rounded-lg bg-slate-900/50 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
+                                    placeholder="john@company.com">
                             </div>
                             <div>
-                                <label for="phone" class="block text-sm font-medium text-slate-300 mb-2">Phone Number *</label>
-                                <input type="tel" id="phone" name="phone" required  minlength="10"
-                                       class="w-full px-4 py-3 rounded-lg bg-slate-900/50 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
-                                       placeholder="+1 (555) 000-0000" min  >
+                                <label for="phone" class="block text-sm font-medium text-slate-300 mb-2">Phone Number
+                                    *</label>
+                                <input type="tel" id="phone" name="phone" required minlength="10"
+                                    class="w-full px-4 py-3 rounded-lg bg-slate-900/50 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
+                                    placeholder="+1 (555) 000-0000" min>
                             </div>
                         </div>
-                        
+
                         <div class="mb-6">
                             <label for="company" class="block text-sm font-medium text-slate-300 mb-2">Website</label>
                             <input type="text" id="company" name="company"
                                 class="w-full px-4 py-3 rounded-lg bg-slate-900/50 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
                                 placeholder="example.com">
-                            <p id="website-error" class="hidden text-red-500 text-xs mt-2">Please enter a valid domain (e.g., website.com)</p>
+                            <p id="website-error" class="hidden text-red-500 text-xs mt-2">Please enter a valid domain
+                                (e.g., website.com)</p>
                         </div>
-                        
+
                         <div>
-                            <label for="message" class="block text-sm font-medium text-slate-300 mb-2">How can we help? *</label>
+                            <label for="message" class="block text-sm font-medium text-slate-300 mb-2">How can we help?
+                                *</label>
                             <textarea id="message" name="message" rows="5" required
-                                      class="w-full px-4 py-3 rounded-lg bg-slate-900/50 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all resize-none"
-                                      placeholder="Tell us about your processing volume, industry, or specific needs..."></textarea>
+                                class="w-full px-4 py-3 rounded-lg bg-slate-900/50 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all resize-none"
+                                placeholder="Tell us about your processing volume, industry, or specific needs..."></textarea>
                         </div>
-                        
-                        <button type="submit" 
-                                class="w-full px-10 py-4 rounded-lg bg-primary hover:bg-primary-dark text-white font-bold shadow-lg shadow-primary/20 transition-all duration-300 transform hover:-translate-y-0.5">
+                        <div class="g-recaptcha" data-sitekey="6LeoY-4sAAAAAJ_a4sn8O2R71ifxkDpDnKgh812r">
+                        </div>
+
+                        <button type="submit"
+                            class="w-full px-10 py-4 rounded-lg bg-primary hover:bg-primary-dark text-white font-bold shadow-lg shadow-primary/20 transition-all duration-300 transform hover:-translate-y-0.5">
                             Send Message
                         </button>
                     </form>
@@ -158,11 +186,15 @@
 
 
 
-<div id="toast" class="fixed bottom-6 right-6 bg-slate-800 border rounded-lg shadow-2xl px-6 py-4 flex items-center gap-3 z-50 transform translate-y-0 opacity-0 transition-all duration-300 pointer-events-none">
-    <svg id="toast-icon-success" class="w-6 h-6 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+<div id="toast"
+    class="fixed bottom-6 right-6 bg-slate-800 border rounded-lg shadow-2xl px-6 py-4 flex items-center gap-3 z-50 transform translate-y-0 opacity-0 transition-all duration-300 pointer-events-none">
+    <svg id="toast-icon-success" class="w-6 h-6 text-green-500 flex-shrink-0" fill="none" stroke="currentColor"
+        viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
     </svg>
-    <svg id="toast-icon-error" class="hidden w-6 h-6 text-red-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <svg id="toast-icon-error" class="hidden w-6 h-6 text-red-500 flex-shrink-0" fill="none" stroke="currentColor"
+        viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
     </svg>
     <div>
@@ -173,33 +205,171 @@
 
 
 <script>
-document.getElementById('contact-form').addEventListener('submit', function(e) {
-    const websiteInput = document.getElementById('company');
-    const websiteError = document.getElementById('website-error');
 
-    let value = websiteInput.value.trim();
+    document.getElementById('contact-form')
+        .addEventListener('submit', async function (e) {
 
-    // Remove protocol if user enters it
-    value = value.replace(/^(https?:\/\/)?(www\.)?/, '');
-
-    // Improved domain regex
-    const domainRegex = /^[a-zA-Z0-9-]+\.[a-zA-Z]{2,}(\.[a-zA-Z]{2,})?$/;
-
-    if (value !== "") {
-        if (!domainRegex.test(value)) {
             e.preventDefault();
 
-            websiteInput.classList.add('border-red-500');
-            websiteError.classList.remove('hidden');
+            const websiteInput =
+                document.getElementById('company');
 
-            return;
+            const websiteError =
+                document.getElementById('website-error');
+
+            let value = websiteInput.value.trim();
+
+            value = value.replace(
+                /^(https?:\/\/)?(www\.)?/,
+                ''
+            );
+
+            const domainRegex =
+                /^[a-zA-Z0-9-]+\.[a-zA-Z]{2,}(\.[a-zA-Z]{2,})?$/;
+
+            if (value !== "") {
+                if (!domainRegex.test(value)) {
+                    websiteInput.classList.add(
+                        'border-red-500'
+                    );
+
+                    websiteError.classList.remove(
+                        'hidden'
+                    );
+
+                    return;
+                }
+            }
+
+            websiteInput.classList.remove(
+                'border-red-500'
+            );
+
+            websiteError.classList.add(
+                'hidden'
+            );
+
+            const formData =
+                new FormData(this);
+
+            try {
+
+                const response =
+                    await fetch('/submit', {
+                        method: 'POST',
+                        body: formData
+                    });
+
+                const data =
+                    await response.json();
+
+                if (response.status === 429) {
+
+                    showToast(
+                        "Too many attempts",
+                        "Please wait  and try again",
+                        false
+                    );
+
+                    return;
+                }
+
+                if (data.success) {
+
+                    showToast(
+                        "Success",
+                        "Form submitted successfully",
+                        true
+                    );
+
+                    this.reset();
+
+                } else {
+
+                    showToast(
+                        "Error",
+                        data.message,
+                        false
+                    );
+
+                }
+
+            } catch (error) {
+
+                showToast(
+                    "Error",
+                    "Network issue",
+                    false
+                );
+
+            }
+
+        });
+
+    function showToast(
+        title,
+        message,
+        success
+    ) {
+
+        document.getElementById(
+            'toast-title'
+        ).innerText = title;
+
+        document.getElementById(
+            'toast-message'
+        ).innerText = message;
+
+        const successIcon =
+            document.getElementById(
+                'toast-icon-success'
+            );
+
+        const errorIcon =
+            document.getElementById(
+                'toast-icon-error'
+            );
+
+        if (success) {
+
+            successIcon.classList.remove(
+                'hidden'
+            );
+
+            errorIcon.classList.add(
+                'hidden'
+            );
+
+        } else {
+
+            errorIcon.classList.remove(
+                'hidden'
+            );
+
+            successIcon.classList.add(
+                'hidden'
+            );
         }
+
+        const toast =
+            document.getElementById(
+                'toast'
+            );
+
+        toast.classList.remove(
+            'opacity-0'
+        );
+
+        setTimeout(() => {
+
+            toast.classList.add(
+                'opacity-0'
+            );
+
+        }, 4000);
+
     }
 
-    // Reset error
-    websiteInput.classList.remove('border-red-500');
-    websiteError.classList.add('hidden');
-});
 
 </script>
 
