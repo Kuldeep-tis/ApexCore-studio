@@ -4,7 +4,7 @@ import sys
 import os
 from flask_cors import CORS  # Add this import
 import re
-
+import requests
 import mysql.connector
 from mysql.connector import Error
 
@@ -14,10 +14,30 @@ sys.path.append(os.path.join(os.path.dirname(__file__), 'backend'))
 from chatbot import get_response
 from mail import send_mail # Works
 
+from flask_limiter import Limiter
+from flask_limiter.util import get_remote_address
+from flask_limiter.errors import RateLimitExceeded
+
+
 app = Flask(__name__)
 CORS(app, origins=["https://app.apexcorepay.com"])
 
 
+# Configure rate limiting: 20 requests per minute per IP
+
+limiter = Limiter(
+    get_remote_address,
+    app=app,
+    default_limits=["50 per day","10 per minute"]
+)
+
+
+@app.errorhandler(RateLimitExceeded)
+def ratelimit_handler(e):
+    return jsonify({
+      "success":False,
+      "message":"Too many attempts. Wait 1 minute."
+    }),429
 
 # New MySQL Database connection
 def get_db_connection():
@@ -78,6 +98,30 @@ def init_db():
 
 # Initialize database
 init_db()
+
+
+# captcha
+def verify_captcha(token):
+
+    secret=os.getenv(
+        "RECAPTCHA_SECRET"
+    )
+
+    response=requests.post(
+        "https://www.google.com/recaptcha/api/siteverify",
+        data={
+            "secret":secret,
+            "response":token
+        }
+    )
+
+    result=response.json()
+
+    return result.get(
+        "success",
+        False
+    )
+
 
 
 # --- SEO Routes (NEW) ---
@@ -153,8 +197,21 @@ def contact():
     return render_template('base/contact.html')
 
 @app.route('/submit', methods=['POST'])
+@limiter.limit("3 per minute")
 def submit():
     try:
+        captcha_token=request.form.get(
+        'g-recaptcha-response'
+        )
+
+        if not verify_captcha(
+            captcha_token
+            ):
+            return jsonify({
+                "success":False,
+                "message":"Captcha verification failed"
+            }),403
+
         first_name = request.form.get('firstName', '')
         last_name = request.form.get('lastName', '')
         email = request.form.get('email', '')
@@ -263,8 +320,21 @@ def init_partner_db():
 init_partner_db()
 
 @app.route('/submit-partner', methods=['POST'])
+@limiter.limit("3 per minute")
 def submit_partner():
     try:
+        captcha_token=request.form.get(
+            'g-recaptcha-response'
+            )
+
+        if not verify_captcha(
+            captcha_token
+            ):
+            return jsonify({
+                "success":False,
+                "message":"Captcha verification failed"
+            }),403
+
         legal_name = request.form.get('legalName', '')
         dba = request.form.get('dba', '')
         cell = request.form.get('cell', '')
@@ -346,6 +416,10 @@ def chatbot():
 def landing():
     print("landing page  ")
     return render_template('features/landing.html')
+
+@app.route('/calendly')
+def calendly_redirect():
+    return redirect("https://calendly.com/apexcorepay")
 
 
 
