@@ -17,6 +17,7 @@ from mail import send_mail # Works
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 from flask_limiter.errors import RateLimitExceeded
+from werkzeug.middleware.proxy_fix import ProxyFix
 
 
 from dotenv import load_dotenv
@@ -24,15 +25,18 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = Flask(__name__)
+
+# Trust NGINX reverse proxy headers to accurately extract the true client IP
+app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1, x_host=1, x_prefix=1)
+
 CORS(app, origins=["https://app.apexcorepay.com"])
 
 
-# Configure rate limiting: 20 requests per minute per IP
-
+# Configure rate limiting: bound strictly to the true client IP extracted by ProxyFix
 limiter = Limiter(
-    get_remote_address,
+    key_func=get_remote_address,
     app=app,
-    default_limits=["50 per day","10 per minute"]
+    default_limits=["50 per day", "10 per minute"]
 )
 
 
